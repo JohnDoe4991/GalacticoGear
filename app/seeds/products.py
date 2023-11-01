@@ -68,7 +68,7 @@ def seed_products():
         title="Classic Copa del Rey Jersey",
         photo_url="https://galictogear.s3.us-west-1.amazonaws.com/Copa.jpeg",
         description="Wear a piece of Real Madrid history.",
-        size='Mediu',
+        size='Medium',
         price=210,
         created_at=date.today()
     )
