@@ -6,6 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import GetProducts from "./components/Products/GetAllProducts";
+import ProductDetailPage from "./components/Products/ProductDetail";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <GetProducts />
+          </Route>
+          <Route path="/products/:id">
+            <ProductDetailPage />
           </Route>
           <Route>Page Not Found</Route>
         </Switch>
