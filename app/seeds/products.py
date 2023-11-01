@@ -1,10 +1,10 @@
-from faker import Faker
+
 from ..models import User, Product, db, environment, SCHEMA
 from random import randint
 from datetime import date
 from sqlalchemy.sql import text
 
-fake = Faker()
+
 
 
 def seed_products():
