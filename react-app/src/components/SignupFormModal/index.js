@@ -42,7 +42,7 @@ function SignupFormModal() {
 				setErrors(data);
 			} else {
 				closeModal();
-				push("/posts/current");
+				// push("/posts/current");
 			}
 		} else {
 			setErrors(newErrors);

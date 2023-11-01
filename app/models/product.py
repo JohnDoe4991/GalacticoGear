@@ -16,10 +16,10 @@ class Product(db.Model):
     size = db.Column(db.String(15), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.Date, nullable=False)
-    my_product_user_id = db.relationship(
-        "User", back_populates="my_product_id")
-    my_product_review_id = db.relationship(
-        "Review", back_populates="my_review_product_id", cascade="all, delete-orphan")
+    # my_product_user_id = db.relationship(
+    #     "User", back_populates="my_product_id")
+    # my_product_review_id = db.relationship(
+    #     "Review", back_populates="my_review_product_id", cascade="all, delete-orphan")
 
     def to_dict(self):
         return_dict = {

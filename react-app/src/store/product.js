@@ -39,6 +39,23 @@ export const getProductDetailsThunk = (id) => async (dispatch) => {
    }
 };
 
+//createProductThunk
+export const createProductThunk = (form) => async (dispatch) => {
+   const res = await fetch("/api/products/new", {
+      method: "POST",
+      body: form,
+   });
+
+   if (res.ok) {
+      const { resPost } = await res.json();
+      dispatch(actionGetProductDetails(resPost));
+      return resPost;
+   } else {
+      const data = await res.json();
+      return data;
+   }
+};
+
 const initialState = { allProducts: {} };
 
 export default function productReducer(state = initialState, action) {
