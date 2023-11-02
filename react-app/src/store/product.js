@@ -1,13 +1,15 @@
 //types
 
 const GET_ALL_PRODUCTS = "/get_all_products";
-const GET_PRODUCT_DETAIL = "/product_details"
+const GET_PRODUCT_DETAIL = "/product_details";
+const DELETE_PRODUCT = "/delete_product"
 
 
 //action creator
 
 const actionGetProducts = (products) => ({ type: GET_ALL_PRODUCTS, products });
 const actionGetProductDetails = (product) => ({ type: GET_PRODUCT_DETAIL, product });
+const actionDeleteProduct = (id) => ({ type: DELETE_PRODUCT, id });
 
 
 //Thunks
@@ -47,12 +49,47 @@ export const createProductThunk = (form) => async (dispatch) => {
    });
 
    if (res.ok) {
-      const { resPost } = await res.json();
+      const {resPost} = await res.json();
+      console.log("🚀 ~ file: product.js:53 ~ createProductThunk ~ {resPost}  :", resPost)
       dispatch(actionGetProductDetails(resPost));
       return resPost;
    } else {
       const data = await res.json();
       return data;
+   }
+};
+
+//updateProduct Thunk
+export const updateProductThunk = (form, productId) => async (dispatch) => {
+   try {
+      const res = await fetch(`/api/products/update/${productId}`, {
+         method: "PUT",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+         const resPost = await res.json();
+         return resPost;
+      } else {
+         return { errors: "There was an error updating your product" };
+      }
+   } catch (error) {
+      const data = await JSON.stringify(error);
+      return data;
+   }
+};
+
+//deleteProduct Thunk
+export const deleteProductThunk = (id) => async (dispatch) => {
+   const res = await fetch(`/api/products/delete/${id}`, {
+      method: "DELETE",
+   });
+
+   if (res.ok) {
+      dispatch(actionDeleteProduct(id));
+   } else {
+      return { errors: "There was an error deleting your product!" };
    }
 };
 
@@ -68,6 +105,10 @@ export default function productReducer(state = initialState, action) {
       case GET_PRODUCT_DETAIL:
          newState = { ...state, allProducts: { ...state.allProducts } };
          newState.allProducts[action.product.id] = action.product;
+         return newState;
+      case DELETE_PRODUCT:
+         newState = { ...state, allProducts: { ...state.allProducts } };
+         delete newState.allProducts[action.id];
          return newState;
       default:
          return state;

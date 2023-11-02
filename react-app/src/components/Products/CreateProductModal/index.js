@@ -34,10 +34,11 @@ export default function CreateProductModal() {
         setImage(null);
         setTitle("");
         setDescription("");
+        setSize("");
+        setPrice("");
 
         if (productData.errors === undefined || !productData.errors) {
-
-            // push("/userposts");
+            push("/")
             return closeModal();
         } else {
             setImageLoading(false)
