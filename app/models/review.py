@@ -21,5 +21,5 @@ class Review(db.Model):
             "productId": self.product_id,
             "review": self.review,
             "createdAt": self.created_at,
-            "users": self.my_review_user_id.to_dict()
+            # "users": self.my_review_user_id.to_dict()
         }
