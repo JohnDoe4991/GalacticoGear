@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { getProductDetailsThunk } from "../../../store/product";
+import OpenModalButton from "../../OpenModalButton";
+import UpdateProductModal from "../UpdateProductModal";
+import DeleteProductModal from "../DeleteProductModal"
 
 export default function ProductDetailPage() {
     const { id } = useParams();
@@ -18,6 +21,29 @@ export default function ProductDetailPage() {
         <div className="product-detail-container">
             <div className="detail-content">
                 <img className="detail-photo" src={product.photoUrl} alt="" />
+                <div className="Product-Details-Buttons">
+                    {user.id === product.ownerId && (
+                        <div>
+                            <OpenModalButton
+                                buttonText="Update Product"
+                                modalComponent={<UpdateProductModal productId={product.id} />}
+                            />
+                        </div>
+                    )}
+
+                    {user.id === product.ownerId && (
+                        <div>
+                            <OpenModalButton
+                                buttonText="Delete Product"
+                                modalComponent={
+                                    <DeleteProductModal
+                                        productId={product.id}
+                                    />
+                                }
+                            />
+                        </div>
+                    )}
+                </div>
                 <div className="right-side-detail">
                     <h2>{product.price}</h2>
                     <p>{product.title},{" "} {product.description}</p>

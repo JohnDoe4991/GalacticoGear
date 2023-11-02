@@ -14,13 +14,13 @@ export default function GetProducts() {
     }, [dispatch]);
 
     const goToProduct = useCallback((product) => {
-        push(`/products/${product.id}`);
+        push(`/products/${product?.id}`);
     }, [push]);
 
     return (
         <div className="allproducts-container">
             {productsToDisplay.map((product) => (
-                <div onClick={() => goToProduct(product)} key={product.id}>
+                <div onClick={() => goToProduct(product)} key={product?.id}>
                     <img
                         src={product.photoUrl}
                         alt=""
