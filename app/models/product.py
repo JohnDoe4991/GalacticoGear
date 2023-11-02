@@ -31,7 +31,7 @@ class Product(db.Model):
             "size": self.size,
             "price": self.price,
             "createdAt": self.created_at,
-            'users': self.my_product_user_id.to_dict(),
+            # 'users': self.my_product_user_id.to_dict(),
         }
 
         return return_dict

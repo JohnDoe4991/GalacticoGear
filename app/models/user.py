@@ -9,12 +9,12 @@ class User(db.Model, UserMixin):
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
-    id = db.Column(db.Integer, primary_key = True)
-    first_name = db.Column(db.String(50), nullable = False)
-    last_name = db.Column(db.String(50), nullable = False)
-    username = db.Column(db.String(50), nullable = False, unique = True)
-    email = db.Column(db.String(50), nullable = False, unique = True)
-    hashed_password = db.Column(db.String, nullable = False)
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(50), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    username = db.Column(db.String(50), nullable=False, unique=True)
+    email = db.Column(db.String(50), nullable=False, unique=True)
+    hashed_password = db.Column(db.String, nullable=False)
     # my_product_id = db.relationship("Product", back_populates = "my_product_user_id", cascade = "all, delete-orphan")
     # my_review_id = db.relationship("Review", back_populates = "my_review_user_id", cascade = "all, delete-orphan")
 
