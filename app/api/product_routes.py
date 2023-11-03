@@ -8,17 +8,21 @@ from .auth_routes import validation_errors_to_error_messages
 
 product_routes = Blueprint('products', __name__)
 
+MAX_ALLOWED_ID_FOR_DELETION = 20
+
+
+def set_csrf_token(form):
+    form['csrf_token'].data = request.cookies['csrf_token']
+
 
 @product_routes.route('/new', methods=['GET', 'POST'])
 @login_required
 def new_product():
-    """Creates a products"""
+    """Creates a product"""
     form = ProductForm()
-
-    form['csrf_token'].data = request.cookies['csrf_token']
+    set_csrf_token(form)
 
     if form.validate_on_submit():
-        print("form is valid")
         image = form.data["image"]
         image.filename = get_unique_filename(image.filename)
         upload = upload_file_to_s3(image)
@@ -36,7 +40,6 @@ def new_product():
 
         db.session.add(product)
         db.session.commit()
-        
 
         return {"resPost": product.to_dict()}
 
@@ -46,14 +49,12 @@ def new_product():
 @product_routes.route("/update/<int:id>", methods=["PUT"])
 @login_required
 def update_product(id):
-    """Updates a products"""
+    """Updates a product"""
     product_to_update = Product.query.get(id)
     form = UpdateProductForm()
-
-    form['csrf_token'].data = request.cookies['csrf_token']
+    set_csrf_token(form)
 
     if form.validate_on_submit():
-
         product_title = form.data['title']
         product_description = form.data['description']
         product_size = form.data['size']
@@ -76,26 +77,24 @@ def update_product(id):
 def delete_product(id):
     """Deletes a specific product"""
     product_to_delete = Product.query.get(id)
-    if id < 21:
-        db.session.delete(product_to_delete)
-        db.session.commit()
-        return 'Success, your product was deleted.'
-    elif id > 20:
 
-        file_delete = remove_file_from_s3(product_to_delete.photo_url)
+    try:
+        if id > MAX_ALLOWED_ID_FOR_DELETION:
+            file_delete = remove_file_from_s3(product_to_delete.photo_url)
+    except Exception as e:
+        
+        return {"Error": f"Product Delete Error: {str(e)}"}
 
-        db.session.delete(product_to_delete)
-        db.session.commit()
-        return 'Success, your product was deleted.'
-    else:
-        return {"Error": "Product Delete Error, please try again"}
+    db.session.delete(product_to_delete)
+    db.session.commit()
+
+    return 'Success, your product was deleted.'
 
 
 @product_routes.route("/")
 def get_all_products():
-    """returns a all products"""
+    """returns all products"""
     products = Product.query.all()
-
     return [product.to_dict() for product in products]
 
 
@@ -104,5 +103,4 @@ def get_all_products():
 def get_product_details(id):
     """returns a single product"""
     product = Product.query.get(id)
-
     return product.to_dict()
