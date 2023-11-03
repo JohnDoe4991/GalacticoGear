@@ -82,7 +82,7 @@ def delete_product(id):
         if id > MAX_ALLOWED_ID_FOR_DELETION:
             file_delete = remove_file_from_s3(product_to_delete.photo_url)
     except Exception as e:
-        
+
         return {"Error": f"Product Delete Error: {str(e)}"}
 
     db.session.delete(product_to_delete)
@@ -91,7 +91,7 @@ def delete_product(id):
     return 'Success, your product was deleted.'
 
 
-@product_routes.route("/")
+@product_routes.route("/all")
 def get_all_products():
     """returns all products"""
     products = Product.query.all()

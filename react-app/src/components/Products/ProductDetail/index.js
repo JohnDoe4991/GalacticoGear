@@ -7,6 +7,26 @@ import UpdateProductModal from "../UpdateProductModal";
 import DeleteProductModal from "../DeleteProductModal"
 import { GetAllReviewsThunk } from "../../../store/reviews";
 import CreateReviewForm from "../../Reviews/CreateReview";
+import UpdateReviewModal from "../../Reviews/UpdateReview";
+import DeleteReviewModal from "../../Reviews/DeleteReviewModal";
+
+
+const renderStars = (stars) => {
+    const starIcons = [];
+
+    for (let i = 1; i <= 5; i++) {
+        starIcons.push(
+            <span
+                key={i}
+                className={`star ${i <= stars ? 'lit' : ''}`}
+            >
+                &#9733;
+            </span>
+        );
+    }
+
+    return starIcons;
+};
 
 export default function ProductDetailPage() {
     const { id } = useParams();
@@ -15,7 +35,7 @@ export default function ProductDetailPage() {
     const user = useSelector((state) => state.session.user);
     const allProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
-    
+
 
 
     const product = allProducts[id];
@@ -24,9 +44,6 @@ export default function ProductDetailPage() {
         dispatch(getAllProductsThunk());
         dispatch(GetAllReviewsThunk());
     }, [dispatch]);
-
-    if (product === undefined) return null;
-    if (reviews === undefined) return null;
 
     const fixDate = (dateString) => {
         const date = new Date(dateString);
@@ -37,6 +54,10 @@ export default function ProductDetailPage() {
         });
         return formatter.format(date);
     };
+
+    if (product === undefined) return null;
+    if (reviews === undefined) return null;
+
 
     const reviewsArray = Object.values(reviews).filter(
         (review) => review.productId == id
@@ -88,11 +109,14 @@ export default function ProductDetailPage() {
                                     <p className="postdetails-datedate">
                                         {fixDate(review.createdAt)}
                                     </p>
+                                    <div className="star-rating">
+                                        {renderStars(review.stars)}
+                                    </div>
                                     <p className="postdetail-comment">
                                         "{review.review}"
                                     </p>
 
-                                    {/* {comment.userId === (user.id ? user.id : null) && (
+                                    {review.userId === (user.id ? user.id : null) && (
                                         <OpenModalButton
                                             buttonText="Update Review"
                                             modalComponent={
@@ -103,7 +127,7 @@ export default function ProductDetailPage() {
                                             }
                                         />
                                     )}
-                                    {comment.userId === (user.id ? user.id : null) && (
+                                    {review.userId === (user.id ? user.id : null) && (
                                         <OpenModalButton
                                             buttonText="Delete Review"
                                             modalComponent={
@@ -113,7 +137,7 @@ export default function ProductDetailPage() {
                                                 />
                                             }
                                         />
-                                    )} */}
+                                    )}
                                 </div>
                             </div>
                         ))

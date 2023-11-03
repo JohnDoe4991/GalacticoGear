@@ -17,7 +17,7 @@ const actionDeleteProduct = (id) => ({ type: DELETE_PRODUCT, id });
 
 //getAllProducts
 export const getAllProductsThunk = () => async (dispatch) => {
-   const res = await fetch("/api/products/");
+   const res = await fetch("/api/products/all");
    if (res.ok) {
       const data = await res.json();
       dispatch(actionGetProducts(data));

@@ -25,7 +25,7 @@ export default function DeleteProductModal({ productId }) {
                 } else {
                 }
             })
-            .then(push(`/`));
+            .then(push(`/all`));
     };
 
     return (

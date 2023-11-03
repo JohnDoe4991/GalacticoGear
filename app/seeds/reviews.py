@@ -35,14 +35,16 @@ def seed_reviews():
     for _ in range(50):
         user_id = randint(1, len(user_ids))
         product_id = randint(1, len(Product.query.all()))
-        
+
         review_text = choice(real_review_texts)
+        stars = 5
         created_at = date.today()
 
         new_review = Review(
             user_id=user_id,
             product_id=product_id,
             review=review_text,
+            stars=stars,
             created_at=created_at
         )
 

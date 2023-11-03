@@ -42,7 +42,7 @@ function SignupFormModal() {
 				setErrors(data);
 			} else {
 				closeModal();
-				// push("/products/current");
+				push("/all");
 			}
 		} else {
 			setErrors(newErrors);
@@ -51,7 +51,7 @@ function SignupFormModal() {
 
 	return (
 		<div className="sign-up-container">
-			<h1 className="Sign-up-h1">Sign Up for ShutterScape</h1>
+			<h1 className="Sign-up-h1">Join the Squad</h1>
 			<form onSubmit={handleSubmit}>
 				<div>
 					{errors && errors.length >= 1 && errors.map((error, idx) => (

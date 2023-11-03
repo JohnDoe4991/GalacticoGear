@@ -1,3 +1,47 @@
-.allproducts-container{
+/* Landing  */
+
+.landing-container {
+    background-image: url("https://galictogear.s3.us-west-1.amazonaws.com/ronaldogif.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+  }
+
+
+.landing-text button {
     background-color: whitesmoke;
+    height: 44px;
+    width: 174px;
+    border-radius: 10px;
+    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    color:black;
+    text-shadow:
+      2px 2px 0 white,
+      2px 2px 4px gold;
+      font-size: 15pt;
+}
+
+/* Star Rating */
+
+.star-rating {
+  font-size: 24px;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lit {
+  color: gold;
 }
