@@ -10,6 +10,24 @@ import CreateReviewForm from "../../Reviews/CreateReview";
 import UpdateReviewModal from "../../Reviews/UpdateReview";
 import DeleteReviewModal from "../../Reviews/DeleteReviewModal";
 
+
+const renderStars = (stars) => {
+    const starIcons = [];
+
+    for (let i = 1; i <= 5; i++) {
+        starIcons.push(
+            <span
+                key={i}
+                className={`star ${i <= stars ? 'lit' : ''}`}
+            >
+                &#9733;
+            </span>
+        );
+    }
+
+    return starIcons;
+};
+
 export default function ProductDetailPage() {
     const { id } = useParams();
     const { push } = useHistory();
@@ -91,6 +109,9 @@ export default function ProductDetailPage() {
                                     <p className="postdetails-datedate">
                                         {fixDate(review.createdAt)}
                                     </p>
+                                    <div className="star-rating">
+                                        {renderStars(review.stars)}
+                                    </div>
                                     <p className="postdetail-comment">
                                         "{review.review}"
                                     </p>

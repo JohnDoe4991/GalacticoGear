@@ -20,6 +20,7 @@ def create_review(id):
             user_id=current_user.id,
             product_id=id,
             review=form.data['review'],
+            stars=form.data['stars'],
             created_at=date.today()
         )
         db.session.add(new_review)
@@ -37,8 +38,10 @@ def update_review(id):
     form = ReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
-        new_review = form.data['review'],
-        review_to_update.review = new_review[0]
+        new_review = form.data['review']
+        new_stars = form.data['stars']
+        review_to_update.review = new_review
+        review_to_update.stars = new_stars
 
         db.session.commit()
 

@@ -52,7 +52,7 @@ export const updateReviewThunk = (review, reviewId) => async (dispatch) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(review),
     });
-    console.log("🚀 ~ file: reviews.js:50 ~ updateReviewThunk ~ reviewId:", reviewId)
+    
 
     if (response.ok) {
         const data = await response.json()
