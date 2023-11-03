@@ -38,7 +38,7 @@ export default function CreateProductModal() {
         setPrice("");
 
         if (productData.errors === undefined || !productData.errors) {
-            push("/")
+            push("/all")
             return closeModal();
         } else {
             setImageLoading(false)

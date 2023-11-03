@@ -1,22 +1,27 @@
-import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import {
-    createReviewThunk,
-    GetAllReviewsThunk,
-} from "../../../store/reviews";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../../context/Modal";
-import "../../CSS/mycss.css"
+import { useParams, useHistory } from "react-router-dom";
+import {
+    GetAllReviewsThunk,
+    updateReviewThunk,
+} from "../../../store/reviews";
 
-export default function CreateReviewForm({ productId }) {
+
+export default function UpdateReviewModal({ reviewId }) {
     const dispatch = useDispatch();
-    const [review, setReview] = useState("");
-    const { closeModal } = useModal();
-    const [validationObject, setValidationObject] = useState({});
+    const [validationObject, setValidationObject] = useState({})
     const [disableSubmitButton, setdisableSubmitButton] = useState(true);
     const [hoveredStars, setHoveredStars] = useState(0);
     const [selectedStars, setSelectedStars] = useState(0);
-    const [stars, setStars] = useState(0);
+    const [stars, setStars] = useState(0)
+    const { closeModal, setOnModalClose } = useModal();
+    const getReviews = useSelector(
+        (state) => state.reviews.allReviews);
+    const singleReview = getReviews[reviewId]
+
+
+    const [review, setReview] = useState(singleReview.review);
 
     const handleMouseEnter = (stars) => {
         setHoveredStars(stars);
@@ -27,55 +32,62 @@ export default function CreateReviewForm({ productId }) {
     };
 
     const handleStarClick = (stars) => {
-        setStars(stars);
+        setStars(stars)
         setSelectedStars(stars);
     };
+
+    useEffect(() => {
+        dispatch(GetAllReviewsThunk());
+    }, [dispatch]);
 
     useEffect(() => {
         const errorsObject = {};
 
         if (review.length < 10) {
-            errorsObject.review = "Review must be more than 10 characters.";
+            errorsObject.review = "Review must be more than 10 characters."
         }
 
         if (!selectedStars) {
-            errorsObject.selectedStars = "Please select a star rating";
+            errorsObject.selectedStars = "Please select a star rating"
         }
 
         setdisableSubmitButton(!(review.length >= 10));
-        setValidationObject(errorsObject);
-    }, [selectedStars, review]);
+        setValidationObject(errorsObject)
+    }, [selectedStars, review])
 
     useEffect(() => {
         setdisableSubmitButton(!(stars >= 1 && review.length >= 10));
     }, [stars, review]);
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newReview = {
+        const updatedReview = {
             review: review,
             stars: stars,
         };
 
-        dispatch(createReviewThunk(productId, newReview));
+        dispatch(updateReviewThunk(updatedReview, reviewId));
+
         setReview("");
-        return dispatch(GetAllReviewsThunk()).then(closeModal());
+
+        return closeModal();
     };
 
     return (
-        <div className="post-review-container">
-            <h1 className="post-reviewh1">Post Review</h1>
+        <div className="update-review-container">
+            <h1 className="update-review1">Update Review</h1>
             <div className="error-box">
-                {validationObject.review && (
-                    <p className="errors-one"> {validationObject.review}</p>
-                )}
+                {validationObject.review && <p
+                    className="errors-one"> {validationObject.review}</p>}
             </div>
             <form onSubmit={handleSubmit} className="review-form-container">
+                <h3 className="review-h3">Review</h3>
                 <label>
                     <textarea
                         type="text"
-                        id="review-text-area1"
+                        id="review-text-area"
                         value={review}
                         placeholder="Add a review about this photo..."
                         onChange={(e) => setReview(e.target.value)}
@@ -85,16 +97,13 @@ export default function CreateReviewForm({ productId }) {
                     <p className="errors-one"> {validationObject.selectedStars}</p>
                 )}
                 <div className="star-rating">
-                    {[1, 2, 3, 4, 5].map((star) => (
+                    {[1, 2, 3, 4, 5].map((stars) => (
                         <span
-                            key={star}
-                            className={`star ${hoveredStars >= star || selectedStars >= star
-                                    ? 'lit'
-                                    : ''
-                                }`}
-                            onMouseEnter={() => handleMouseEnter(star)}
+                            key={stars}
+                            className={`star ${hoveredStars >= stars || selectedStars >= stars ? 'lit' : ''}`}
+                            onMouseEnter={() => handleMouseEnter(stars)}
                             onMouseLeave={handleMouseLeave}
-                            onClick={() => handleStarClick(star)}
+                            onClick={() => handleStarClick(stars)}
                         >
                             &#9733;
                         </span>
@@ -107,7 +116,7 @@ export default function CreateReviewForm({ productId }) {
                     className="review-submit"
                     disabled={Object.keys(validationObject).length > 0}
                 >
-                    Create Review
+                    Update Review
                 </button>
             </form>
         </div>
