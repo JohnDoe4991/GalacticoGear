@@ -2,12 +2,16 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { getAllProductsThunk } from "../../../store/product";
+import OpenModalButton from "../../OpenModalButton";
+import UpdateProductModal from "../UpdateProductModal";
+import DeleteProductModal from "../DeleteProductModal";
 
 export default function GetProducts() {
     const { push } = useHistory();
     const dispatch = useDispatch();
     const getAllProducts = useSelector((state) => state.products.allProducts);
     const productsToDisplay = Object.values(getAllProducts);
+    const user = useSelector((state) => state.session.user);
 
     useEffect(() => {
         dispatch(getAllProductsThunk());
@@ -26,6 +30,29 @@ export default function GetProducts() {
                         alt=""
                         className="userproducts-images"
                     ></img>
+                    <div className="Product-Details-Buttons">
+                        {user.id === product.ownerId && (
+                            <div>
+                                <OpenModalButton
+                                    buttonText="Update Product"
+                                    modalComponent={<UpdateProductModal productId={product.id} />}
+                                />
+                            </div>
+                        )}
+
+                        {user.id === product.ownerId && (
+                            <div>
+                                <OpenModalButton
+                                    buttonText="Delete Product"
+                                    modalComponent={
+                                        <DeleteProductModal
+                                            productId={product.id}
+                                        />
+                                    }
+                                />
+                            </div>
+                        )}
+                    </div>
                     <p>{product.title}</p>
                     <p>Rating</p>
                     <p>${product.price}</p>

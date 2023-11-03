@@ -49,8 +49,7 @@ export const createProductThunk = (form) => async (dispatch) => {
    });
 
    if (res.ok) {
-      const {resPost} = await res.json();
-      console.log("🚀 ~ file: product.js:53 ~ createProductThunk ~ {resPost}  :", resPost)
+      const { resPost } = await res.json();
       dispatch(actionGetProductDetails(resPost));
       return resPost;
    } else {
