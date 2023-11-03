@@ -15,7 +15,7 @@ export default function ProductDetailPage() {
     const user = useSelector((state) => state.session.user);
     const allProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
-    console.log("🚀 ~ file: index.js:17 ~ ProductDetailPage ~ reviews:", reviews)
+    
 
 
     const product = allProducts[id];
@@ -41,7 +41,7 @@ export default function ProductDetailPage() {
     const reviewsArray = Object.values(reviews).filter(
         (review) => review.productId == id
     );
-    
+
 
 
     return (
