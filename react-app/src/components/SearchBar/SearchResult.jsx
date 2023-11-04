@@ -1,21 +1,19 @@
-import React from 'react'
-import "../SearchBar/SearchBar.css"
-import { useHistory, useParams } from 'react-router-dom'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-const SearchResult = ({result}) => {
-    const {push} = useHistory();
+const SearchResult = ({ result, clearSearch }) => {
+  const { push } = useHistory();
 
-    const goToCurrent = () => {
-        return push(`/products/${result.id}`);
-     };
-
-
+  const goToCurrent = () => {
+    push(`/products/${result.id}`);
+    clearSearch(); 
+  };
 
   return (
     <div className='search-result' onClick={goToCurrent}>
-        {result.title}
+      {result.title}
     </div>
-  )
-}
+  );
+};
 
-export default SearchResult
+export default SearchResult;

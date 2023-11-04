@@ -2,7 +2,7 @@ import React from 'react'
 import SearchResult from './SearchResult'
 import "../SearchBar/SearchBar.css"
 
-const ResultsList = ({results}) => {
+const ResultsList = ({results, clearSearch}) => {
 
 
 
@@ -10,8 +10,10 @@ const ResultsList = ({results}) => {
     <div className='results-list'>
 {
 results.map((result, id) => {
-   return <SearchResult result={result} key={id}/>
+  return <SearchResult result={result} key={id} clearSearch={clearSearch} />;
 })
+
+
 }
 
     </div>
