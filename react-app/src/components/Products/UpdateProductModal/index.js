@@ -68,9 +68,9 @@ export default function UpdateProductModal({ productId }) {
     };
 
     return (
-        <div>
-            <h1>Update Product</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="update-product-container">
+            <h1 className="update-product-h1">Update Product</h1>
+            <form onSubmit={handleSubmit} className="update-product-form">
                 <label>Title</label>
                 <input
                     type="text"
@@ -122,7 +122,7 @@ export default function UpdateProductModal({ productId }) {
                     </div>
                 )}
 
-                <label htmlFor="price">Price: $</label>
+                <label htmlFor="price">Price in $</label>
                 <input
                     type="number"
                     id="price"

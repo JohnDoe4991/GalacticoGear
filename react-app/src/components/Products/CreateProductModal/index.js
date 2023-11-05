@@ -55,8 +55,20 @@ export default function CreateProductModal() {
             errorsObject.description = "Description must be more than 10 characters.";
         }
 
+        if (title.length < 5) {
+            errorsObject.title = "Title must be more than 5 characters.";
+        }
+
+        if (size.length < 3) {
+            errorsObject.size = "Size must be more than 3 characters.";
+        }
+
+        if (isNaN(price) || parseFloat(price) <= 0) {
+            errorsObject.price = "Price must be a valid number greater than 0.";
+        }
+
         setValidationObject(errorsObject);
-    }, [description]);
+    }, [description, title, size, price]);
 
     return (
         <div className="create-product-container">
@@ -90,6 +102,11 @@ export default function CreateProductModal() {
 
 
                 <label>Title</label>
+                <div className="error-box-product">
+                    {validationObject.title && (
+                        <p className="errors-one-product"> {validationObject.title}</p>
+                    )}
+                </div>
                 <input
                     type="text"
                     name="title"
@@ -112,6 +129,11 @@ export default function CreateProductModal() {
                     onChange={(e) => setDescription(e.target.value)}
                 />
                 <label>Size</label>
+                <div className="error-box-product">
+                    {validationObject.size && (
+                        <p className="errors-one-product"> {validationObject.size}</p>
+                    )}
+                </div>
                 <input
                     type="text"
                     name="size"
@@ -120,6 +142,11 @@ export default function CreateProductModal() {
                     onChange={(e) => setSize(e.target.value)}
                 />
                 <label>Price</label>
+                <div className="error-box-product">
+                    {validationObject.price && (
+                        <p className="errors-one-product"> {validationObject.price}</p>
+                    )}
+                </div>
                 <input
                     type="text"
                     name="price"

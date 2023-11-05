@@ -1,7 +1,84 @@
-.profile-dropdown {
-  position: absolute;
+.nav-container{
+    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    max-width: 1002px;
+    box-shadow: 0px 0px 8px #ddd;
 }
 
-.hidden {
+.logo-img{
+  width: 177px;
+  margin-right: 42px;
+}
+
+.logo-img:hover{
+cursor:pointer;
+}
+
+.navBar-inner-container{
+  width: 1002px;
+  display: flex;
+    margin-top: 14px;
+}
+
+.results-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown{
+  position: absolute;
+  background-color: #0e2929;
+    border-radius: 10px;
+    height: 97px;
+    padding: 4px;
+    text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+      color:white;
+      box-shadow: 0px 0px 8px #ddd;
+}
+
+
+.profile-dropdown.hidden {
   display: none;
+}
+
+.prof-button {
+  margin-right: 76px;
+  margin-top: 7px;
+}
+
+.prof-button1 {
+  margin-top: 4px;
+  margin-left: 49px;
+}
+
+.prof-container{
+  margin-top: 9px;
+}
+
+.prof-container button {
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  background-color: transparent;
+  margin:3px;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px #ddd;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+      color:white;
+}
+
+.prof-container button:hover {
+  cursor: pointer;
+}
+
+.not-logged-in{
+  display: flex;
+  flex-direction: column;
+}
+
+.prof-dets {
+  margin-top: 3px;
+    margin-bottom: 3px;
 }

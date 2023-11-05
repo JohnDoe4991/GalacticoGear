@@ -15,6 +15,7 @@
     text-shadow:
       2px 2px 0 black,
       2px 2px 4px gold;
+      width: 1002px;
   }
 
 
@@ -44,4 +45,325 @@
 
 .lit {
   color: gold;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #0e2929;
+  color: #fff;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  text-align: center;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.footer-content {
+  width: 1002px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-group {
+  margin: 10px;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-members {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-member {
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  margin-top: 5px;
+}
+
+.footer-icons a {
+  margin-right: 10px;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-icons a:hover {
+  color: #004471;
+}
+
+/* Creat Product Modal */
+
+.create-product-container {
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.hide-file-upload {
+  display: none;
+}
+
+.style-file-upload {
+  background-color: royalblue;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.style-file-upload:hover {
+  cursor: pointer;
+}
+
+.div-file-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.create-product-h1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+  margin-left: 28px;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.create-product-form {
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.create-product-form label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.create-product-submit {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   /* margin-left: 56px; */
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.errors-one {
+  margin-left: 35px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow:
+  2px 2px 4px white;
+}
+
+.create-product-form textarea {
+  /* margin-left: 54px; */
+  margin-bottom: 10px;
+  height: 115px;
+  width: 199px;
+  border-radius: 5px;
+}
+
+.create-product-form label {
+  margin: 10px;
+}
+
+.create-product-form input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+}
+
+.errors-one-product {
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  /* margin-left: 36px; */
+  text-shadow:
+  2px 2px 4px white;
+}
+
+/* Update Product */
+
+.update-product-container {
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.update-product-h1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+      margin-left: 37px;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.update-product-form {
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.update-product-form label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.submit-update-product {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   /* margin-left: 56px; */
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.errors-one {
+  margin-left: 35px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow:
+  2px 2px 4px white;
+}
+
+.update-product-form textarea {
+  /* margin-left: 54px; */
+  margin-bottom: 10px;
+  height: 115px;
+  width: 199px;
+  border-radius: 5px;
+}
+
+.update-product-form label {
+  margin: 10px;
+}
+
+.update-product-form input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+}
+
+/* Delete Product */
+
+#delete-product-modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+}
+
+.confirm-delete1{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-writing{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-da-bttn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.cancel-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }

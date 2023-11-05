@@ -5,12 +5,14 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import SearchBar from '../SearchBar/SearchBar';
 import ResultsList from '../SearchBar/ResultsList';
+import galacticoGear from "../../images/galacticoGear.png"
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
 	const [results, setResults] = useState([]);
 	const [isResultsOpen, setIsResultsOpen] = useState(false);
 	const resultsContainerRef = useRef(null);
+	const [showMenu, setShowMenu] = useState(false);
 
 	const clearSearch = () => {
 		setResults([]);
@@ -35,20 +37,22 @@ function Navigation({ isLoaded }) {
 	}, []);
 
 	return (
-		<ul>
-			<li>
-				<NavLink exact to="/">Home</NavLink>
-			</li>
-			<SearchBar setResults={setResults} setIsResultsOpen={setIsResultsOpen} />
-			<div ref={resultsContainerRef}>
-				{isResultsOpen && <ResultsList results={results} clearSearch={clearSearch} />}
+		<div className="nav-container">
+			<div className='navBar-inner-container'>
+				<div >
+					<NavLink exact to="/"><img className='logo-img' src={galacticoGear} alt="logo" id="logo" /></NavLink>
+				</div>
+				<SearchBar setResults={setResults} setIsResultsOpen={setIsResultsOpen} />
+				<div className='results-container' ref={resultsContainerRef}>
+					{isResultsOpen && <ResultsList results={results} clearSearch={clearSearch} />}
+				</div>
+				{isLoaded && (
+					<div>
+						<ProfileButton user={sessionUser} showMenu={showMenu} />
+					</div>
+				)}
 			</div>
-			{isLoaded && (
-				<li>
-					<ProfileButton user={sessionUser} />
-				</li>
-			)}
-		</ul>
+		</div>
 	);
 }
 
