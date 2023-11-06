@@ -68,9 +68,9 @@ export default function UpdateProductModal({ productId }) {
     };
 
     return (
-        <div>
-            <h1>Update Product</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="update-product-container">
+            <h1 className="update-product-h1">Update Product</h1>
+            <form onSubmit={handleSubmit} className="update-product-form">
                 <label>Title</label>
                 <input
                     type="text"
@@ -83,14 +83,14 @@ export default function UpdateProductModal({ productId }) {
                 />
                 {validationObject.title && (
                     <div className="error-box-product">
-                        <p className="errors-one-pproduct">{validationObject.title}</p>
+                        <p className="errors-one-product">{validationObject.title}</p>
                     </div>
                 )}
 
                 <label>Description</label>
                 <div className="error-box-product">
                     {validationObject.description && (
-                        <p className="errors-one-pproduct">
+                        <p className="errors-one-product">
                             {validationObject.description}
                         </p>
                     )}
@@ -118,11 +118,11 @@ export default function UpdateProductModal({ productId }) {
                 />
                 {validationObject.size && (
                     <div className="error-box-product">
-                        <p className="errors-one-pproduct">{validationObject.size}</p>
+                        <p className="errors-one-product">{validationObject.size}</p>
                     </div>
                 )}
 
-                <label htmlFor="price">Price: $</label>
+                <label htmlFor="price">Price in $</label>
                 <input
                     type="number"
                     id="price"
@@ -137,7 +137,7 @@ export default function UpdateProductModal({ productId }) {
                 />
                 {validationObject.price && (
                     <div className="error-box-product">
-                        <p className="errors-one-pproduct">{validationObject.price}</p>
+                        <p className="errors-one-product">{validationObject.price}</p>
                     </div>
                 )}
 

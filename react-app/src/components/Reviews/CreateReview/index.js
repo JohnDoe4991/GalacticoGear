@@ -6,7 +6,7 @@ import {
     GetAllReviewsThunk,
 } from "../../../store/reviews";
 import { useModal } from "../../../context/Modal";
-import "../../CSS/mycss.css"
+import "../../CSS/mycss.css";
 
 export default function CreateReviewForm({ productId }) {
     const dispatch = useDispatch();
@@ -39,7 +39,7 @@ export default function CreateReviewForm({ productId }) {
         }
 
         if (!selectedStars) {
-            errorsObject.selectedStars = "Please select a star rating";
+            errorsObject.selectedStars = "Please click a rating";
         }
 
         setdisableSubmitButton(!(review.length >= 10));
@@ -88,18 +88,16 @@ export default function CreateReviewForm({ productId }) {
                     {[1, 2, 3, 4, 5].map((star) => (
                         <span
                             key={star}
-                            className={`star ${hoveredStars >= star || selectedStars >= star
-                                    ? 'lit'
-                                    : ''
+                            className={`star ${(hoveredStars >= star || selectedStars >= star) ? 'lit' : ''
                                 }`}
                             onMouseEnter={() => handleMouseEnter(star)}
                             onMouseLeave={handleMouseLeave}
                             onClick={() => handleStarClick(star)}
                         >
-                            &#9733;
+                            {selectedStars >= star ? '🏆' : '⚽️'}
                         </span>
                     ))}
-                    Stars
+                    Trophies
                 </div>
 
                 <button

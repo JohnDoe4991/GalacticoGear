@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
 import CreateProductModal from "../Products/CreateProductModal";
+import "./Navigation.css"
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
+  const history = useHistory()
 
   const openMenu = () => {
     if (showMenu) return;
@@ -33,37 +36,40 @@ function ProfileButton({ user }) {
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout());
+    history.push("/")
   };
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
   const closeMenu = () => setShowMenu(false);
 
   return (
-    <>
-      <button onClick={openMenu}>
+    <div className="prof-container">
+      <button className="prof-button" onClick={openMenu}>
         <i className="fas fa-user-circle" />
       </button>
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
-            <li>
+            <div className="prof-dets">{user.username}</div>
+            <div className="prof-dets">{user.email}</div>
+            <div>
               <OpenModalButton
+                className="prof-button1"
                 buttonText="Create a new product"
                 modalComponent={
                   <CreateProductModal
                   />
                 }
               />
-            </li>
-            <li>
-              <button onClick={handleLogout}>Log Out</button>
-            </li>
+            </div>
+            <div>
+              <button className="prof-button1" onClick={handleLogout}>Log Out</button>
+            </div>
           </>
         ) : (
-          <>
+          <div className="not-logged-in">
             <OpenModalButton
+
               buttonText="Log In"
               onItemClick={closeMenu}
               modalComponent={<LoginFormModal />}
@@ -74,10 +80,10 @@ function ProfileButton({ user }) {
               onItemClick={closeMenu}
               modalComponent={<SignupFormModal />}
             />
-          </>
+          </div>
         )}
       </ul>
-    </>
+    </div>
   );
 }
 
