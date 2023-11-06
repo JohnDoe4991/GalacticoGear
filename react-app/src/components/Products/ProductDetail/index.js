@@ -41,6 +41,7 @@ export default function ProductDetailPage() {
 
     const product = allProducts[id];
 
+
     useEffect(() => {
         dispatch(getAllProductsThunk());
         dispatch(GetAllReviewsThunk());
@@ -97,7 +98,9 @@ export default function ProductDetailPage() {
                     <h2>{product.price}</h2>
                     <p>{product.title},{" "} {product.description}</p>
                     <p>{product.size}</p>
-                    <button className="cart-button" type="button" onClick={() => alert("Feature Coming Soon...")}>Add to cart</button>
+                    {user.id !== product.ownerId && (
+                        <button className="cart-button" type="button" onClick={() => alert("Feature Coming Soon...")}>Add to cart</button>
+                    )}
                 </div>
             </div>
             <div className="comments-container">
