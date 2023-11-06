@@ -9,16 +9,14 @@ class Review(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(
-        add_prefix_for_prod('users.id')), nullable=False)
+        add_prefix_for_prod('users.id'), ondelete='CASCADE'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey(
-        add_prefix_for_prod('products.id')), nullable=False)
+        add_prefix_for_prod('products.id'), ondelete='CASCADE'), nullable=False)
     review = db.Column(db.String(1000), nullable=False)
     stars = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.Date, nullable=False)
     # my_review_user_id = db.relationship("User", back_populates = "my_review_id")
     # my_review_product_id = db.relationship("Product", back_populates = "my_product_review_id")
-
-    
 
     def to_dict(self):
         return {

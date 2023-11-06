@@ -22,6 +22,8 @@ cursor:pointer;
 .results-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
+    margin-right: 364px;
 }
 
 .profile-dropdown{
@@ -81,4 +83,15 @@ cursor:pointer;
 .prof-dets {
   margin-top: 3px;
     margin-bottom: 3px;
+}
+
+.nav-h3{
+  padding-right: 276px;
+    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    font-weight: bold;
+    padding-left: 154px;
+    margin-left: 61px;
+    text-shadow:
+      2px 2px 0 white,
+      2px 2px 4px gold;
 }

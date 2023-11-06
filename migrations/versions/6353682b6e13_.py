@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 571415b3769c
+Revision ID: 6353682b6e13
 Revises:
-Create Date: 2023-11-05 22:26:39.985380
+Create Date: 2023-11-06 10:52:37.618761
 
 """
 from alembic import op
@@ -13,7 +13,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
-revision = '571415b3769c'
+revision = '6353682b6e13'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -64,8 +64,10 @@ def upgrade():
                         length=1000), nullable=False),
                     sa.Column('stars', sa.Integer(), nullable=False),
                     sa.Column('created_at', sa.Date(), nullable=False),
-                    sa.ForeignKeyConstraint(['product_id'], ['products.id'], ),
-                    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+                    sa.ForeignKeyConstraint(
+                        ['product_id'], ['products.id'], ondelete='CASCADE'),
+                    sa.ForeignKeyConstraint(
+                        ['user_id'], ['users.id'], ondelete='CASCADE'),
                     sa.PrimaryKeyConstraint('id')
                     )
 

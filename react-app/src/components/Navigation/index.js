@@ -42,15 +42,20 @@ function Navigation({ isLoaded }) {
 				<div >
 					<NavLink exact to="/"><img className='logo-img' src={galacticoGear} alt="logo" id="logo" /></NavLink>
 				</div>
-				<SearchBar setResults={setResults} setIsResultsOpen={setIsResultsOpen} />
-				<div className='results-container' ref={resultsContainerRef}>
-					{isResultsOpen && <ResultsList results={results} clearSearch={clearSearch} />}
-				</div>
+				{sessionUser && (
+					<SearchBar setResults={setResults} setIsResultsOpen={setIsResultsOpen} />
+				)}
+				{!sessionUser && (
+					<h3 className='nav-h3'>!HalaMadrid!</h3>
+				)}
 				{isLoaded && (
-					<div>
+					<div className="profile-button-container">
 						<ProfileButton user={sessionUser} showMenu={showMenu} />
 					</div>
 				)}
+			</div>
+			<div className='results-container' ref={resultsContainerRef}>
+				{isResultsOpen && <ResultsList results={results} clearSearch={clearSearch} />}
 			</div>
 		</div>
 	);
