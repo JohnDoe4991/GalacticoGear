@@ -578,3 +578,223 @@ justify-content: space-between;
   font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
   font-weight: 200;
  }
+
+ /* Login Form */
+
+ .login-form-container{
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+ }
+
+ .login-form{
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+ }
+
+ .login-h1{
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+ }
+
+ .login-form label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.submit-login {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   /* margin-left: 56px; */
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+
+.login-form input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+}
+
+/* signup */
+
+.Sign-up-h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.sign-up-container form {
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.error {
+  margin-left: 55px;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color: red;
+  font-size: 11px;
+}
+
+.sign-up-container label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.sign-up-container input {
+  /* width: 100%; */
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+  margin: 10px;
+}
+
+.sign-up-container button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 198px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  /* margin-left: 56px; */
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.sign-up-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.sign-up-container{
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+/* Delete Review Modal */
+
+#delete-review-modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+}
+
+.confirm-delete2{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-writing2{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-da-bttn2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.cancel-delete2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+/* Update Review  */
+.update-review-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+}
+
+.update-review1{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+      font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}

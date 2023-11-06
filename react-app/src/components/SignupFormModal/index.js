@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../context/Modal";
 import { signUp } from "../../store/session";
-import "./SignupForm.css"
+import "../CSS/mycss.css"
 
 function SignupFormModal() {
 	const dispatch = useDispatch();
@@ -59,67 +59,73 @@ function SignupFormModal() {
 					))}
 				</div>
 				<label>
-					{errors.firstName && <p className="error">{errors.firstName}</p>}
-					<input
-						type="text"
-						placeholder="First Name"
-						value={firstName}
-						onChange={(e) => setFirstName(e.target.value)}
-						required
-					/>
+					First Name
 				</label>
+				{errors.firstName && <p className="errors-one-product">{errors.firstName}</p>}
+				<input
+					type="text"
+					placeholder="First Name"
+					value={firstName}
+					onChange={(e) => setFirstName(e.target.value)}
+					required
+				/>
 				<label>
-					{errors.lastName && <p className="error">{errors.lastName}</p>}
-					<input
-						type="text"
-						placeholder="Last Name"
-						value={lastName}
-						onChange={(e) => setLastName(e.target.value)}
-						required
-					/>
+					Last Name
 				</label>
+				{errors.lastName && <p className="errors-one-product">{errors.lastName}</p>}
+				<input
+					type="text"
+					placeholder="Last Name"
+					value={lastName}
+					onChange={(e) => setLastName(e.target.value)}
+					required
+				/>
 				<label>
-					{errors.email && <p className="error">{errors.email}</p>}
-					<input
-						type="text"
-						placeholder="Email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
-					/>
+					Email
 				</label>
+				{errors.email && <p className="errors-one-product">{errors.email}</p>}
+				<input
+					type="text"
+					placeholder="Email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					required
+				/>
 				<label>
-					{errors.username && <p className="error">{errors.username}</p>}
-					<input
-						type="text"
-						placeholder="Username"
-						value={username}
-						onChange={(e) => setUsername(e.target.value)}
-						required
-					/>
+					Username
 				</label>
+				{errors.username && <p className="errors-one-product">{errors.username}</p>}
+				<input
+					type="text"
+					placeholder="Username"
+					value={username}
+					onChange={(e) => setUsername(e.target.value)}
+					required
+				/>
 				<label>
-					{errors.password && <p className="error">{errors.password}</p>}
-					<input
-						type="password"
-						placeholder="Password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-						required
-					/>
+					Password
 				</label>
+				{errors.password && <p className="errors-one-product">{errors.password}</p>}
+				<input
+					type="password"
+					placeholder="Password"
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+					required
+				/>
 				<label>
-					{errors.confirmPassword && (
-						<p className="error">{errors.confirmPassword}</p>
-					)}
-					<input
-						type="password"
-						placeholder="Confirm Password"
-						value={confirmPassword}
-						onChange={(e) => setConfirmPassword(e.target.value)}
-						required
-					/>
+					Confirm Password
 				</label>
+				{errors.confirmPassword && (
+					<p className="errors-one-product">{errors.confirmPassword}</p>
+				)}
+				<input
+					type="password"
+					placeholder="Confirm Password"
+					value={confirmPassword}
+					onChange={(e) => setConfirmPassword(e.target.value)}
+					required
+				/>
 				<button type="submit">Sign Up</button>
 			</form>
 		</div>

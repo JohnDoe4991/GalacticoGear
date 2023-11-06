@@ -4,6 +4,7 @@ import { useModal } from "../../../context/Modal";
 import { deleteReviewThunk } from "../../../store/reviews";
 import { getAllProductsThunk } from "../../../store/product";
 import { useParams, useHistory } from "react-router-dom";
+import "../../CSS/mycss.css"
 
 
 export default function DeleteReviewModal({ reviewId, id }) {
@@ -21,15 +22,15 @@ export default function DeleteReviewModal({ reviewId, id }) {
 
     return (
         <div id="delete-review-modal-container">
-            <h1 className="confirm-delete">Delete Review</h1>
-            <p className="delete-writing">Are you sure you want to remove this review?</p>
+            <h1 className="confirm-delete2">Delete Review</h1>
+            <p className="delete-writing2">Are you sure you want to remove this review?</p>
             <button
-                className="delete-da-bttn"
+                className="delete-da-bttn2"
                 onClick={handleSubmit}
             >
                 Yes (Delete review)
             </button>
-            <button className="cancel-delete" onClick={closeModal}>
+            <button className="cancel-delete2" onClick={closeModal}>
                 No (Keep review)
             </button>
         </div >
