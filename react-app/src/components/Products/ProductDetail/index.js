@@ -18,15 +18,16 @@ const renderStars = (stars) => {
         starIcons.push(
             <span
                 key={i}
-                className={`star ${i <= stars ? 'lit' : ''}`}
+                className={`stars ${i <= stars ? 'lits' : ''}`}
             >
-                &#9733;
+                {i <= stars ? '🏆' : ' '}
             </span>
         );
     }
 
     return starIcons;
 };
+
 
 export default function ProductDetailPage() {
     const { id } = useParams();
