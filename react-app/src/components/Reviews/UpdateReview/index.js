@@ -48,7 +48,7 @@ export default function UpdateReviewModal({ reviewId }) {
         }
 
         if (!selectedStars) {
-            errorsObject.selectedStars = "Please select a star rating"
+            errorsObject.selectedStars = "Please click a rating"
         }
 
         setdisableSubmitButton(!(review.length >= 10));
@@ -97,18 +97,19 @@ export default function UpdateReviewModal({ reviewId }) {
                     <p className="errors-one"> {validationObject.selectedStars}</p>
                 )}
                 <div className="star-rating">
-                    {[1, 2, 3, 4, 5].map((stars) => (
+                    {[1, 2, 3, 4, 5].map((star) => (
                         <span
-                            key={stars}
-                            className={`star ${hoveredStars >= stars || selectedStars >= stars ? 'lit' : ''}`}
-                            onMouseEnter={() => handleMouseEnter(stars)}
+                            key={star}
+                            className={`star ${(hoveredStars >= star || selectedStars >= star) ? 'lit' : ''
+                                }`}
+                            onMouseEnter={() => handleMouseEnter(star)}
                             onMouseLeave={handleMouseLeave}
-                            onClick={() => handleStarClick(stars)}
+                            onClick={() => handleStarClick(star)}
                         >
-                            &#9733;
+                            {selectedStars >= star ? '🏆' : '⚽️'}
                         </span>
                     ))}
-                    Stars
+                    Trophies
                 </div>
 
                 <button

@@ -15,6 +15,7 @@
     text-shadow:
       2px 2px 0 black,
       2px 2px 4px gold;
+      width: 1002px;
   }
 
 
@@ -33,6 +34,8 @@
 
 /* Star Rating */
 
+/* Trophy Rating */
+
 .star-rating {
   font-size: 24px;
 }
@@ -43,5 +46,535 @@
 }
 
 .lit {
-  color: gold;
+  color: gold; /* Change the color to your desired color */
 }
+
+
+/* Footer */
+
+.footer {
+  background-color: #0e2929;
+  color: #fff;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  text-align: center;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.footer-content {
+  width: 1002px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-group {
+  margin: 10px;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-members {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-member {
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  margin-top: 5px;
+}
+
+.footer-icons a {
+  margin-right: 10px;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-icons a:hover {
+  color: #004471;
+}
+
+/* Creat Product Modal */
+
+.create-product-container {
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.hide-file-upload {
+  display: none;
+}
+
+.style-file-upload {
+  background-color: royalblue;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.style-file-upload:hover {
+  cursor: pointer;
+}
+
+.div-file-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.create-product-h1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+  margin-left: 28px;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.create-product-form {
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.create-product-form label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.create-product-submit {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   /* margin-left: 56px; */
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.errors-one {
+  margin-left: 35px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow:
+  2px 2px 4px white;
+}
+
+.create-product-form textarea {
+  /* margin-left: 54px; */
+  margin-bottom: 10px;
+  height: 115px;
+  width: 199px;
+  border-radius: 5px;
+}
+
+.create-product-form label {
+  margin: 10px;
+}
+
+.create-product-form input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+}
+
+.errors-one-product {
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  /* margin-left: 36px; */
+  text-shadow:
+  2px 2px 4px white;
+}
+
+/* Update Product */
+
+.update-product-container {
+  width: 299px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.update-product-h1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+      margin-left: 37px;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.update-product-form {
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.update-product-form label {
+  display: flex;
+  justify-content: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.submit-update-product {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   /* margin-left: 56px; */
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+
+.errors-one {
+  margin-left: 35px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow:
+  2px 2px 4px white;
+}
+
+.update-product-form textarea {
+  /* margin-left: 54px; */
+  margin-bottom: 10px;
+  height: 115px;
+  width: 199px;
+  border-radius: 5px;
+}
+
+.update-product-form label {
+  margin: 10px;
+}
+
+.update-product-form input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px #ddd;
+}
+
+/* Delete Product */
+
+#delete-product-modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+}
+
+.confirm-delete1{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-writing{
+  color:white;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
+}
+
+.delete-da-bttn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.cancel-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5380fa;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  box-shadow: 1px 5px 1px black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+/* Get All Products */
+
+.top-logo {
+  background-color: #F5FFB8;
+  height: 205px;
+  width: 1002px;
+  display: flex;
+  color: #034927;
+  font-weight: none;
+  justify-content: center;
+}
+
+.allproducts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.logo-writing{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #034927;
+  font-weight: none;
+  margin-left: 24px;
+}
+
+.product-top-img{
+  width: 274px;
+}
+
+.logo-h2{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #034927;
+  font-weight: 100;
+}
+
+.savings{
+  margin-left: 103px;
+  font-weight: bold;
+}
+
+.save-now{
+  background-color: #034927;
+    height: 32px;
+    width: 127px;
+    border-radius: 15px;
+    border: none;
+    color: #F5FFB8;
+    margin-left: 83px;
+    cursor: pointer;
+}
+
+.logo-h4{
+  font-size: 6pt;
+  margin-top: 22px;
+}
+
+.product-top-img1{
+  width: 339px;
+  margin-left: 74px;
+}
+
+.sponsor{
+  color:#595959;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sponsor-by{
+  margin-right: 516px;
+}
+
+.page-break{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 19pt;
+  font-weight: 100;
+}
+
+.page-breakh3{
+  color:#595959;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 100;
+}
+
+.all-products-small-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 847px;
+    max-width: 1002px;
+    margin: 0 auto;
+    margin-top: 7px;
+ }
+
+ .userproducts-images{
+  width: 244px;
+    height: 265px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #ddd;
+ }
+
+ .single-product{
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  margin: 10px;
+    color: black;
+    text-shadow:
+      2px 2px 0 #ddd;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: 100;
+      height: 393px;
+ }
+
+ .row1{
+  display: flex;
+  justify-content: space-around;
+  height: 27px;
+ }
+
+ .row2{
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .product-title{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12pt;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    margin-bottom: 3px;
+ }
+
+ .single-product button {
+  margin: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 10px;
+  border: none;
+    font-size: 8pt;
+    width: 95px;
+    cursor:pointer;
+
+ }
+
+ .product-bttns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .what-is-container{
+  background-color: #FDEBD2;
+  width: 1002px;
+ }
+
+ .what-is-h1{
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 20pt;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ .what-is-bttm-container{
+display:flex;
+justify-content: space-between;
+ }
+
+ .what-is-left {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 20px;
+ }
+ .what-is-middle{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 41px;
+ }
+
+ .what-is-right{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-right: 20px;
+ }
+
+ .bttm-headers{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 13pt;
+    font-weight: 100;
+ }
+
+
+ .what-is-p{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 200;
+ }

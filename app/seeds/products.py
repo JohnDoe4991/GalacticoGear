@@ -5,8 +5,6 @@ from datetime import date
 from sqlalchemy.sql import text
 
 
-
-
 def seed_products():
     new_product_1 = Product(
         owner_id=1,
@@ -175,11 +173,11 @@ def seed_products():
 
     new_product_16 = Product(
         owner_id=5,
-        title="Ozil Jersey",
-        photo_url="https://galictogear.s3.us-west-1.amazonaws.com/Ozil.jpeg",
-        description="Home Ozil kit.",
+        title="2016/17 Home Kit",
+        photo_url="https://galictogear.s3.us-west-1.amazonaws.com/ronaldo1..jpeg",
+        description="Ronaldo home kit.",
         size='Extra Large',
-        price=90,
+        price=246,
         created_at=date.today()
     )
     db.session.add(new_product_16)
@@ -208,7 +206,7 @@ def seed_products():
 
     new_product_19 = Product(
         owner_id=6,
-        title="Cristiano Ronaldo Blue Alternate Jersey",
+        title="CR7 Blue Jersey",
         photo_url="https://galictogear.s3.us-west-1.amazonaws.com/Ronaldo2.jpeg",
         description="The goat's away jersey. I know you recognize it from his champions bicycle kick againts Juventus",
         size='Medium',

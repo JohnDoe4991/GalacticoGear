@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import GetProducts from "./components/Products/GetAllProducts";
 import ProductDetailPage from "./components/Products/ProductDetail";
 import Landing from "./components/Landing";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,24 +21,27 @@ function App() {
     <>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
-        <Switch>
-          <Route path="/login" >
-            <LoginFormPage />
-          </Route>
-          <Route path="/signup">
-            <SignupFormPage />
-          </Route>
-          <Route exact path="/">
-            <Landing />
-          </Route>
-          <Route exact path="/all">
-            <GetProducts />
-          </Route>
-          <Route path="/products/:id">
-            <ProductDetailPage />
-          </Route>
-          <Route>Page Not Found</Route>
-        </Switch>
+        <>
+          <Switch>
+            <Route path="/login" >
+              <LoginFormPage />
+            </Route>
+            <Route path="/signup">
+              <SignupFormPage />
+            </Route>
+            <Route exact path="/">
+              <Landing />
+            </Route>
+            <Route exact path="/all">
+              <GetProducts />
+            </Route>
+            <Route path="/products/:id">
+              <ProductDetailPage />
+            </Route>
+            <Route>Page Not Found</Route>
+          </Switch>
+          <Footer />
+        </>
       )}
     </>
   );
