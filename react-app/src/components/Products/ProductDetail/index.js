@@ -37,8 +37,6 @@ export default function ProductDetailPage() {
     const allProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
 
-
-
     const product = allProducts[id];
 
 
@@ -70,40 +68,53 @@ export default function ProductDetailPage() {
     return (
         <div className="product-detail-container">
             <div className="detail-content">
-                <img className="detail-photo" src={product.photoUrl} alt="" />
-                <div className="Product-Details-Buttons">
-                    {user.id === product.ownerId && (
-                        <div>
-                            <OpenModalButton
-                                buttonText="Update Product"
-                                modalComponent={<UpdateProductModal productId={product.id} />}
-                            />
-                        </div>
-                    )}
+                <div className="photo-container">
+                    <img className="detail-photo" src={product.photoUrl} alt="" />
+                    <div className="Product-Details-Buttons">
+                        {user.id === product.ownerId && (
+                            <div>
+                                <OpenModalButton
+                                    buttonText="Update Product"
+                                    modalComponent={<UpdateProductModal productId={product.id} />}
+                                />
+                            </div>
+                        )}
 
-                    {user.id === product.ownerId && (
-                        <div>
-                            <OpenModalButton
-                                buttonText="Delete Product"
-                                modalComponent={
-                                    <DeleteProductModal
-                                        productId={product.id}
-                                    />
-                                }
-                            />
-                        </div>
-                    )}
+                        {user.id === product.ownerId && (
+                            <div>
+                                <OpenModalButton
+                                    buttonText="Delete Product"
+                                    modalComponent={
+                                        <DeleteProductModal
+                                            productId={product.id}
+                                        />
+                                    }
+                                />
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className="right-side-detail">
-                    <h2>{product.price}</h2>
-                    <p>{product.title},{" "} {product.description}</p>
-                    <p>{product.size}</p>
-                    {user.id !== product.ownerId && (
-                        <button className="cart-button" type="button" onClick={() => alert("Feature Coming Soon...")}>Add to cart</button>
-                    )}
+                    <h3 className="detail-h3">In demand. 23 people bought this in the last 24 hours.</h3>
+                    <h2 className="detail-price">${product.price}+</h2>
+                    <p className="detail-title">{product.title},{" "} {product.description}</p>
+                    <p className="detail-size">{product.size}</p>
+                    <div className="detail-container">
+                        <p className="Item-details">Item Details</p>
+                        <h3 className="handmade">✋ Handmade</h3>
+                        <p className="detail-title">{product.title},{" "} {product.description}</p>
+                        <h3 className="handmade">🏎️ Free shipping</h3>
+                        <div className="carbon-container">
+                            <p className="carbon-p">GalacticoGear offsets carbon emissions from shipping and packaging on this purchase</p>
+                        </div>
+                        <p className="handmade"><span className="detail-span">GalacticoGear Purchase Protection:</span> Shop confidently on GalacticoGear
+                            knowing if something goes wrong with an order, we've got your back for all eligible purchases!</p>
+                    </div>
                 </div>
             </div>
             <div className="comments-container">
+                {reviewsArray.length !== undefined && reviewsArray.length === 1 && (<h3 className="num-reviews">{reviewsArray.length}{"  "}Review</h3>)}
+                {reviewsArray && reviewsArray.length > 1 && <h3 className="num-reviews">{reviewsArray.length} {"  "}Reviews</h3>}
                 <div className="past-comments">
                     {reviewsArray && reviewsArray.length >= 1 ? (
                         reviewsArray.map((review, index) => (
@@ -113,7 +124,7 @@ export default function ProductDetailPage() {
                                     <p className="postdetails-datedate">
                                         {fixDate(review.createdAt)}
                                     </p>
-                                    <div className="star-rating">
+                                    <div className="star-rating1">
                                         {renderStars(review.stars)}
                                     </div>
                                     <p className="postdetail-comment">
@@ -143,7 +154,9 @@ export default function ProductDetailPage() {
                                         />
                                     )}
                                 </div>
+                                <hr></hr>
                             </div>
+
                         ))
                     ) : (
                         <div className="be-the-first">
@@ -151,17 +164,18 @@ export default function ProductDetailPage() {
                         </div>
                     )}
                 </div>
-
-                <div className="create-review-button">
-                    <OpenModalButton
-                        buttonText="Post Review"
-                        modalComponent={
-                            <CreateReviewForm
-                                productId={id}
-                            />
-                        }
-                    />
-                </div>
+                {user.id !== product.ownerId && (
+                    <div className="create-review-button">
+                        <OpenModalButton
+                            buttonText="Post Review"
+                            modalComponent={
+                                <CreateReviewForm
+                                    productId={id}
+                                />
+                            }
+                        />
+                    </div>
+                )}
             </div>
         </div>
     )
