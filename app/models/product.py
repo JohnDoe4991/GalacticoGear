@@ -1,4 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
+from datetime import datetime
 
 
 class Product(db.Model):
@@ -15,7 +16,8 @@ class Product(db.Model):
     description = db.Column(db.String(1000), nullable=False)
     size = db.Column(db.String(15), nullable=False)
     price = db.Column(db.Integer, nullable=False)
-    created_at = db.Column(db.Date, nullable=False)
+    created_at = db.Column(
+        db.DateTime, default=datetime.utcnow, nullable=False)
     # my_product_user_id = db.relationship(
     #     "User", back_populates="my_product_id")
     # my_product_review_id = db.relationship(
