@@ -51,8 +51,8 @@ export default function CreateProductModal() {
     useEffect(() => {
         const errorsObject = {};
 
-        if (description.length < 10) {
-            errorsObject.description = "Description must be more than 10 characters.";
+        if (description.length < 10 || description.length > 1000) {
+            errorsObject.description = "Description must between 10 - 1000 characters.";
         }
 
         if (title.length < 5) {
