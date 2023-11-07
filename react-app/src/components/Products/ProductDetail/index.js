@@ -63,6 +63,9 @@ export default function ProductDetailPage() {
         (review) => review.productId == id
     );
 
+    const randomPeopleCount = Math.floor(Math.random() * 100) + 1;
+
+
 
 
     return (
@@ -95,7 +98,7 @@ export default function ProductDetailPage() {
                     </div>
                 </div>
                 <div className="right-side-detail">
-                    <h3 className="detail-h3">In demand. 23 people bought this in the last 24 hours.</h3>
+                    <h3 className="detail-h3">In demand. {randomPeopleCount} people bought this in the last 24 hours.</h3>
                     <h2 className="detail-price">${product.price}+</h2>
                     <p className="detail-title">{product.title},{" "} {product.description}</p>
                     <p className="detail-size">{product.size}</p>

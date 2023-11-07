@@ -12,7 +12,7 @@ class Review(db.Model):
         add_prefix_for_prod('users.id'), ondelete='CASCADE'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey(
         add_prefix_for_prod('products.id'), ondelete='CASCADE'), nullable=False)
-    review = db.Column(db.String(1000), nullable=False)
+    review = db.Column(db.String(350), nullable=False)
     stars = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.Date, nullable=False)
     # my_review_user_id = db.relationship("User", back_populates = "my_review_id")
