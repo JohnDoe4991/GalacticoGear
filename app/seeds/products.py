@@ -1,11 +1,14 @@
 
 from ..models import User, Product, db, environment, SCHEMA
 from random import randint
-from datetime import date
+from datetime import datetime
 from sqlalchemy.sql import text
 
 
 def seed_products():
+
+    current_datetime = datetime.now()
+
     new_product_1 = Product(
         owner_id=1,
         title="2023 Home Kit",
@@ -13,7 +16,7 @@ def seed_products():
         description="Classic white home kit for the 2023/24 Season.",
         size='Small',
         price=250,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_1)
 
@@ -24,7 +27,7 @@ def seed_products():
         description="Wear the home kit from the glory days of the BBC",
         size='Medium',
         price=250,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_2)
 
@@ -35,7 +38,7 @@ def seed_products():
         description="Grab a Real Madrid icon's jersey fresh off a new Netflix documentary.",
         size='Large',
         price=150,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_3)
 
@@ -46,7 +49,7 @@ def seed_products():
         description="Awesome older away kit worn by the stars.",
         size='Medium',
         price=100,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_4)
 
@@ -57,7 +60,7 @@ def seed_products():
         description="Portugues superstar iconic jersey.",
         size='Large',
         price=60,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_5)
 
@@ -68,7 +71,7 @@ def seed_products():
         description="Wear a piece of Real Madrid history.",
         size='Medium',
         price=210,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_6)
 
@@ -79,7 +82,7 @@ def seed_products():
         description="Real Madrid kit for women.",
         size='Small',
         price=100,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_7)
 
@@ -90,7 +93,7 @@ def seed_products():
         description="Support your club with this long sleeve collectible.",
         size='Extra Small',
         price=150,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_8)
 
@@ -101,7 +104,7 @@ def seed_products():
         description="For those few Real Madrid Hazard supporters.",
         size='Medium',
         price=20,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_9)
 
@@ -112,7 +115,7 @@ def seed_products():
         description="Celebrate Eden's short time at the greatest club in the world.",
         size='Small',
         price=10,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_10)
 
@@ -123,7 +126,7 @@ def seed_products():
         description="From signing day.",
         size='Small',
         price=300,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_11)
 
@@ -134,7 +137,7 @@ def seed_products():
         description="Isco's home kit during his time at Madrid.",
         size='Large',
         price=160,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_12)
 
@@ -145,7 +148,7 @@ def seed_products():
         description="Beautiful home kit worn by the man himself.",
         size='Medium',
         price=450,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_13)
 
@@ -156,7 +159,7 @@ def seed_products():
         description="Home kit during an impressive run for the club.",
         size='Small',
         price=250,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_14)
 
@@ -167,7 +170,7 @@ def seed_products():
         description="Stylish blue away kit.",
         size='Medium',
         price=200,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_15)
 
@@ -178,7 +181,7 @@ def seed_products():
         description="Ronaldo home kit.",
         size='Extra Large',
         price=246,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_16)
 
@@ -189,7 +192,7 @@ def seed_products():
         description="Legendary defender's home jersey.",
         size='Medium',
         price=100,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_17)
 
@@ -200,7 +203,7 @@ def seed_products():
         description="Legendary defender's black and purple alternate away jersey.",
         size='Medium',
         price=100,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_18)
 
@@ -211,7 +214,7 @@ def seed_products():
         description="The goat's away jersey. I know you recognize it from his champions bicycle kick againts Juventus",
         size='Medium',
         price=600,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_19)
 
@@ -222,7 +225,7 @@ def seed_products():
         description="The goat's home jersey.",
         size='Medium',
         price=500,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_20)
 
@@ -233,7 +236,7 @@ def seed_products():
         description="Zizu home jersey.",
         size='Medium',
         price=240,
-        created_at=date.today()
+        created_at=current_datetime
     )
     db.session.add(new_product_21)
 

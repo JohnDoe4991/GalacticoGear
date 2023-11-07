@@ -52,7 +52,7 @@ export default function CreateProductModal() {
         const errorsObject = {};
 
         if (description.length < 10 || description.length > 1000) {
-            errorsObject.description = "Description must between 10 - 1000 characters.";
+            errorsObject.description = "Description must be between 10 - 1000 characters.";
         }
 
         if (title.length < 5) {

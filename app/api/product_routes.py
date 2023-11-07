@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from ..models import Product, db
-from datetime import date
+from datetime import datetime
 from flask_login import login_required, current_user
 from ..forms import ProductForm, UpdateProductForm
 from .aws_helpers import upload_file_to_s3, get_unique_filename, remove_file_from_s3
@@ -35,7 +35,7 @@ def new_product():
             description=form.data['description'],
             size=form.data['size'],
             price=form.data['price'],
-            created_at=date.today()
+            created_at=datetime.now()
         )
 
         db.session.add(product)
@@ -93,8 +93,8 @@ def delete_product(id):
 
 @product_routes.route("/all")
 def get_all_products():
-    """returns all products"""
-    products = Product.query.all()
+    """returns all products ordered by newest first"""
+    products = Product.query.order_by(Product.created_at.desc()).all()
     return [product.to_dict() for product in products]
 
 
