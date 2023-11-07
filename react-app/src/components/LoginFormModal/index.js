@@ -36,7 +36,7 @@ function LoginFormModal() {
     <div className="login-form-container">
       <h1 className="login-h1">Log In</h1>
       <form className="login-form" onSubmit={handleSubmit}>
-        <div>
+        <div className="error">
           {errors.map((error, idx) => (
             <div key={idx}>{error}</div>
           ))}
