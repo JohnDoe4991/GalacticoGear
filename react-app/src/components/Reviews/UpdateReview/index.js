@@ -27,8 +27,8 @@ export default function UpdateReviewModal({ reviewId }) {
     useEffect(() => {
         const errorsObject = {};
 
-        if (review.length < 10) {
-            errorsObject.review = "Review must be more than 10 characters.";
+        if (review.length < 10 || review.length > 1000) {
+            errorsObject.review = "Review must be between 10 - 1000 characters.";
         }
 
         if (!selectedStars) {

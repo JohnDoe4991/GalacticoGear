@@ -37,7 +37,7 @@ export default function UpdateProductModal({ productId }) {
 
          if (formData.description.length < 10 || formData.description.length > 1000) {
             errorsObject.description =
-                "Description must between 10 - 1000 characters.";
+                "Description must be between 10 - 1000 characters.";
         }
 
         if (formData.title.length < 5) {

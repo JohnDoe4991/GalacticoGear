@@ -14,7 +14,10 @@ export default function GetProducts() {
     const reviews = useSelector((state) => state.reviews.allReviews)
 
     const productsToDisplay = Object.values(getAllProducts);
+
     const user = useSelector((state) => state.session.user);
+
+    productsToDisplay.reverse();
 
     function calculateAverageRatings(reviews) {
         const productRatings = {};
