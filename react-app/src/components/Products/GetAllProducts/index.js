@@ -84,7 +84,7 @@ export default function GetProducts() {
                             alt=""
                             className="userproducts-images"
                         ></img>
-                        <div className="Product-Details-Buttons">
+                        <div className="Product-Details-Buttons1">
                             {user.id === product.ownerId && (
                                 <div className="product-bttns">
                                     <OpenModalButton
@@ -104,7 +104,7 @@ export default function GetProducts() {
                         </div>
                         <div className="row1">
                             <p>${product.price}</p>
-                            <p>🏆 {averageRatings[product.id] || 'New'}</p>
+                            <p>🏆 {averageRatings[product.id] ? averageRatings[product.id].toFixed(1) : 'New'}</p>
                         </div>
                         <div className="row2">
                             <p>{product.size}</p>

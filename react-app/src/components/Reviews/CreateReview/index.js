@@ -64,11 +64,11 @@ export default function CreateReviewForm({ productId }) {
     };
 
     return (
-        <div className="post-review-container">
-            <h1 className="post-reviewh1">Post Review</h1>
+        <div className="product-review-container">
+            <h1 className="product-reviewh1">Post Review</h1>
             <div className="error-box">
                 {validationObject.review && (
-                    <p className="errors-one"> {validationObject.review}</p>
+                    <p className="errors-one1"> {validationObject.review}</p>
                 )}
             </div>
             <form onSubmit={handleSubmit} className="review-form-container">
@@ -82,7 +82,7 @@ export default function CreateReviewForm({ productId }) {
                     />
                 </label>
                 {validationObject.selectedStars && (
-                    <p className="errors-one"> {validationObject.selectedStars}</p>
+                    <p className="errors-one12"> {validationObject.selectedStars}</p>
                 )}
                 <div className="star-rating">
                     {[1, 2, 3, 4, 5].map((star) => (
