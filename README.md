@@ -1,6 +1,6 @@
-# Flask React Project
+# GalacticoGear
 
-This is the starter for the Flask React project.
+GalacticoGear is an etsy inspired eccomerce site that allows users to create products, review products, and search for products using a searchbar.
 
 ## Getting started
 
