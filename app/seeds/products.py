@@ -109,7 +109,7 @@ def seed_products():
     db.session.add(new_product_9)
 
     new_product_10 = Product(
-        owner_id=1,
+        owner_id=5,
         title="Hazard Home Kit",
         photo_url="https://galictogear.s3.us-west-1.amazonaws.com/Hazard2.jpeg",
         description="Celebrate Eden's short time at the greatest club in the world.",

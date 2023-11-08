@@ -68,8 +68,8 @@ export default function GetProducts() {
                 <img className="product-top-img" src={"https://galictogear.s3.us-west-1.amazonaws.com/white-home.jpeg"} alt="" />
                 <div className="logo-writing">
                     <h2 className="logo-h2">Early Holiday DEALS are here!</h2>
-                    <h3 className="savings">25%+ OFF</h3>
-                    <button className="save-now" type="button" onClick={() => alert("Keep your money...")}>Save Now</button>
+                    <h3 className="savings">75%+ OFF</h3>
+                    <button className="save-now" type="button" onClick={() => push("/products/10")}>Save Now</button>
                     <h4 className="logo-h4">Participating shops only. Terms apply.</h4>
                 </div>
                 <img className="product-top-img1" src={"https://galictogear.s3.us-west-1.amazonaws.com/shirt.jpeg"} alt="" />

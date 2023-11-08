@@ -37,6 +37,7 @@ export default function ProductDetailPage() {
     const allProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
 
+
     const product = allProducts[id];
 
 
@@ -99,7 +100,7 @@ export default function ProductDetailPage() {
                 </div>
                 <div className="right-side-detail">
                     <h3 className="detail-h3">In demand. {randomPeopleCount} people bought this in the last 24 hours.</h3>
-                    <h2 className="detail-price">${product.price}+</h2>
+                    <h2 className="detail-price">${product.price}+ {product.id === 10 && <h3 className="discount">🎄75% off for the holidays🎄</h3>}</h2>
                     <p className="detail-title">{product.title},{" "} {product.description}</p>
                     <p className="detail-size">{product.size}</p>
                     <div className="detail-container">
