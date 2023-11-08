@@ -13,7 +13,7 @@ class Product(db.Model):
         add_prefix_for_prod("users.id")))
     title = db.Column(db.String(50), nullable=False)
     photo_url = db.Column(db.String, nullable=False)
-    description = db.Column(db.String(1000), nullable=False)
+    description = db.Column(db.String(350), nullable=False)
     size = db.Column(db.String(15), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     created_at = db.Column(

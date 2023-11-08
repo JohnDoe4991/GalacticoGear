@@ -83,7 +83,7 @@ def delete_product(id):
             file_delete = remove_file_from_s3(product_to_delete.photo_url)
     except Exception as e:
 
-        return {"Error": f"Product Delete Error: {str(e)}"}
+        return {"Error": f"Product Delete Error: {str(e)}"}, 500
 
     db.session.delete(product_to_delete)
     db.session.commit()

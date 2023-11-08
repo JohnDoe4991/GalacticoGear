@@ -35,9 +35,9 @@ export default function UpdateProductModal({ productId }) {
     useEffect(() => {
         const errorsObject = {};
 
-         if (formData.description.length < 10 || formData.description.length > 1000) {
+         if (formData.description.length < 10 || formData.description.length > 350) {
             errorsObject.description =
-                "Description must be between 10 - 1000 characters.";
+                "Description must be between 10 - 350 characters.";
         }
 
         if (formData.title.length < 5) {
