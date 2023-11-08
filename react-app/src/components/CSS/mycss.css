@@ -815,6 +815,12 @@ justify-content: space-between;
   width: 1002px;
 }
 
+.discount {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #034927;
+    font-weight: 100;
+}
+
 
 .detail-content{
 display: flex;
