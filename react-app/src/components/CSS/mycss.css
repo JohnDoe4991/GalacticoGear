@@ -1277,3 +1277,8 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
     flex-direction: column;
     margin-left: 272px;
 }
+
+.payment-total{
+  display: flex;
+  justify-content: space-between;
+}

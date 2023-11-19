@@ -5,6 +5,19 @@ import { thunkGetAllCarts, thunkRemoveAllItemsFromCart } from "../../store/cart"
 import { getAllProductsThunk } from "../../store/product";
 import RemoveItem from "./removeItem";
 
+const calculateTotalPrice = (userCarts, productsToDisplay) => {
+    let totalPrice = 0;
+    userCarts.forEach((oneCart) => {
+        const matchingProduct = productsToDisplay.find(
+            (product) => product.id === oneCart.productId
+        );
+        if (matchingProduct) {
+            totalPrice += matchingProduct.price;
+        }
+    });
+    return totalPrice;
+};
+
 export default function ShoppingCart() {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.session.user);
@@ -28,6 +41,10 @@ export default function ShoppingCart() {
     } else {
         cartHeaderText = `${userCarts.length} items in your cart`;
     }
+
+
+
+    const totalCartPrice = calculateTotalPrice(userCarts, productsToDisplay);
 
     return (
         <div>
@@ -89,8 +106,27 @@ export default function ShoppingCart() {
                         <hr></hr>
                         <h2 className="payment-header">Pay</h2>
                         <div className="payment-total">
-                            <h3></h3>
+                            <h3>Item(s) total</h3>
+                            <h3>${totalCartPrice.toFixed(2)}</h3>
                         </div>
+                        <hr></hr>
+                        <div className="sub-total">
+                            <h3>Subtotal</h3>
+                            <h3>${totalCartPrice.toFixed(2)}</h3>
+                        </div>
+                        <div className="shipping-total">
+                            <h3>Shipping</h3>
+                            <h3>Free</h3>
+                        </div>
+                        <button
+                            className="remove-all-items-button"
+                            onClick={() => {
+                                dispatch(thunkRemoveAllItemsFromCart(user.id));
+                                window.alert("Thanks for your purchase!");
+                            }}
+                        >
+                            Checkout
+                        </button>
                     </div>
                 </div>
             </div>
