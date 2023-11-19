@@ -9,6 +9,7 @@ import GetProducts from "./components/Products/GetAllProducts";
 import ProductDetailPage from "./components/Products/ProductDetail";
 import Landing from "./components/Landing";
 import Footer from "./components/Footer";
+import ShoppingCart from "./components/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/products/:id">
               <ProductDetailPage />
+            </Route>
+            <Route exact path="/carts">
+              <ShoppingCart />
             </Route>
             <Route>Page Not Found</Route>
           </Switch>
