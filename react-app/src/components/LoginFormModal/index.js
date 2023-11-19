@@ -35,6 +35,10 @@ function LoginFormModal() {
   return (
     <div className="login-form-container">
       <h1 className="login-h1">Log In</h1>
+      {/* Google Auth */}
+      <a href={"/api/auth/oauth_login"}>
+        <button>Login with Google</button>
+      </a>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="error">
           {errors.map((error, idx) => (

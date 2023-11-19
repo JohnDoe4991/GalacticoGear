@@ -52,6 +52,10 @@ function SignupFormModal() {
 	return (
 		<div className="sign-up-container">
 			<h1 className="Sign-up-h1">Join the Squad</h1>
+			{/* Google Auth */}
+			<a href={"/api/auth/oauth_login"}>
+				<button>Sign Up with Google</button>
+			</a>
 			<form onSubmit={handleSubmit}>
 				<div>
 					{errors && errors.length >= 1 && errors.map((error, idx) => (
