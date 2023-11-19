@@ -1204,7 +1204,7 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
 .green-day{
    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
     color: #222222;
-    font-size: 13px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1274,11 +1274,160 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
 
 .payments{
   display: flex;
-    flex-direction: column;
-    margin-left: 272px;
+  flex-direction: column;
+  margin-left: 131px;
+  width: 306px;
+  box-shadow: 0px 0px 8px #ddd;
+  height: 514px;
+  border-radius: 10px;
 }
 
 .payment-total{
   display: flex;
   justify-content: space-between;
+}
+
+.payment-header{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  color: #222222;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.left-total{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  color: #222222;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.cart-ss{
+font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 10px;
+color:rgb(133, 133, 133);
+}
+
+.sub-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-total{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+color:rgb(133, 133, 133);
+}
+
+.shipping-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-items-button2 {
+      margin-left: 37px;
+  width: 227px;
+    margin-top: 35px;
+    color: white;height: 30px;
+    margin-top: 35px;
+    color: white;
+    background-color: #222222;
+    border-radius: 20px;
+    cursor:pointer;
+    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+}
+
+.uplift{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  margin-top: 65px;
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+color:rgb(133, 133, 133);
+}
+
+.ribbon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+font-size: 31px;
+}
+
+.quantity-selector{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.quantity-selector select{
+  margin-left: 3px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px #ddd;
+  border:none;
+}
+
+.cart-item-subtotal{
+  margin-right:10px;
+}
+
+.cfooter-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.us-dollar{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.cfooter-right{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.merchant{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  width: 900px;
+}
+
+.cart-donate{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  justify-content: center;
+
 }
