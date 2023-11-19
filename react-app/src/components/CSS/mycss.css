@@ -639,6 +639,33 @@ justify-content: space-between;
    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
 
+.submit-login-goog{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   width: 198px;
+   height: 30px;
+   border-radius: 5px;
+   border: none;
+   background-color: #5380fa;
+   margin-left: 53px;
+   box-shadow: 1px 5px 1px black;
+   color: white;
+   font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.google-icon{
+  margin-left: 5px;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px red;
+}
+
 
 
 .login-form input {
@@ -664,6 +691,20 @@ justify-content: space-between;
   font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+
+.signp{
+   font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  color:white;
+  font-size: 13px;
+  text-shadow:
+      2px 2px 0 black,
+      2px 2px 4px gold;
 
   align-items: center;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
