@@ -1095,3 +1095,339 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   margin-left: 8px;
   border-radius: 5px;
 }
+
+/* Shopping Cart */
+.fav-button {
+   background-color: #212124;
+}
+
+.filled-cart {
+  color: yellow;
+}
+
+.unfilled-cart {
+  color: white;
+}
+
+.cart-button{
+  margin: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    border: none;
+    font-size: 11pt;
+    width: 156px;
+    cursor: pointer;
+    height: 33px;
+}
+
+/* Shopping Cart */
+.cart-items-container{
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.cart-items-container hr{
+  width: 100%;
+}
+
+.allproductsc-photos{
+  margin: 15px;
+  display: flex;
+}
+
+.allproductsc-photos hr{
+  width: 100%;
+}
+
+.allphotos-left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.purchase-protection-container{
+  display: flex;
+  align-items: center;
+  background-color: #D7E6F5;
+  border-radius: 10px;
+  padding: 9px;
+  margin-top: 20px;
+}
+
+.pp-span{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+      font-weight: 500;
+    color: #222222
+}
+
+.purchase-protection {
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    color: #222222;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.cart-header{
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    font-weight: 300;
+    letter-spacing: .35px;
+    font-size: 26px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cart-photo{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.unique{
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    font-weight: 300;
+    letter-spacing: .35px;
+    font-size: 26px;
+    line-height: 42px;
+    color: #222222;
+}
+
+.shopping-photo{
+  height: 309px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px #ddd;
+}
+
+.green-day{
+   font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    color: #222222;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-container-cart{
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-self: flex-start;
+  width: 540px;
+  margin-bottom: 25px;
+}
+
+.userpost-images{
+  height: 148px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 22px;
+}
+
+.remove-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove-price button{
+  margin: 20px;
+    height: 32px;
+    width: 38px;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.cart-info{
+  width: 100%;
+}
+
+.cart-item-price{
+  font-size: 16px;
+  color: #258635;
+}
+
+.cart-item-title{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.remove-all-items-button{
+  width: 100%;
+    margin-top: 35px;
+    color: white;height: 30px;
+    width: 100%;
+    margin-top: 35px;
+    color: white;
+    background-color: #222222;
+    border-radius: 20px;
+    cursor:pointer;
+    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+}
+
+.payments{
+  display: flex;
+  flex-direction: column;
+  margin-left: 131px;
+  width: 306px;
+  box-shadow: 0px 0px 8px #ddd;
+  height: 514px;
+  border-radius: 10px;
+}
+
+.payment-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-header{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  color: #222222;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.left-total{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  color: #222222;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.cart-ss{
+font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 10px;
+color:rgb(133, 133, 133);
+}
+
+.sub-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-total{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+color:rgb(133, 133, 133);
+}
+
+.shipping-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-items-button2 {
+      margin-left: 37px;
+  width: 227px;
+    margin-top: 35px;
+    color: white;height: 30px;
+    margin-top: 35px;
+    color: white;
+    background-color: #222222;
+    border-radius: 20px;
+    cursor:pointer;
+    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+}
+
+.uplift{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 400;
+  margin-top: 65px;
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+color:rgb(133, 133, 133);
+}
+
+.ribbon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+font-size: 31px;
+}
+
+.quantity-selector{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.quantity-selector select{
+  margin-left: 3px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px #ddd;
+  border:none;
+}
+
+.cart-item-subtotal{
+  margin-right:10px;
+}
+
+.cfooter-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.us-dollar{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.cfooter-right{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.merchant{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  width: 900px;
+}
+
+.cart-donate{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  color: #222222;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  justify-content: center;
+
+}

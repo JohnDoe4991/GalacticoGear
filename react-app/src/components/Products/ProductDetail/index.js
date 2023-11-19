@@ -9,6 +9,7 @@ import { GetAllReviewsThunk } from "../../../store/reviews";
 import CreateReviewForm from "../../Reviews/CreateReview";
 import UpdateReviewModal from "../../Reviews/UpdateReview";
 import DeleteReviewModal from "../../Reviews/DeleteReviewModal";
+import CartItems from "../../Cart/cartItems"
 
 
 const renderStars = (stars) => {
@@ -116,6 +117,7 @@ export default function ProductDetailPage() {
                     </div>
                 </div>
             </div>
+            <CartItems productId={id} userId={user.id} />
             <div className="comments-container">
                 {reviewsArray.length !== undefined && reviewsArray.length === 1 && (<h3 className="num-reviews">{reviewsArray.length}{"  "}Review</h3>)}
                 {reviewsArray && reviewsArray.length > 1 && <h3 className="num-reviews">{reviewsArray.length} {"  "}Reviews</h3>}
