@@ -590,6 +590,10 @@ justify-content: space-between;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
  }
 
+  .submit-goog{
+text-decoration: none;
+ }
+
  .login-form{
   font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
   display: flex;
@@ -656,17 +660,17 @@ justify-content: space-between;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
+   text-decoration: none;
    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
 
-.google-icon{
-  margin-left: 5px;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px red;
+.google-icon {
+  margin-right: 8px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 8px;
 }
-
-
 
 .login-form input {
   border-radius: 5px;
