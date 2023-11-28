@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGoogle } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import { login } from "../../store/session";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
@@ -38,8 +38,8 @@ function LoginFormModal() {
     <div className="login-form-container">
       <h1 className="login-h1">Log In</h1>
       {/* Google Auth */}
-      <a href={"/api/auth/oauth_login"}>
-        <button className="submit-login-goog">Login/Sign Up with <FaGoogle className="google-icon" />oogle </button>
+      <a href={"/api/auth/oauth_login"} className="submit-goog">
+        <button className="submit-login-goog"><FcGoogle className="google-icon" />Sign in with Google</button>
       </a>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="error">

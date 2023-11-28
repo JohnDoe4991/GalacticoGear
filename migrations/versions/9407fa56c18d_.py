@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 920edcf3f5f2
+Revision ID: 9407fa56c18d
 Revises:
-Create Date: 2023-11-19 11:18:28.042336
+Create Date: 2023-11-27 17:43:39.108235
 
 """
 from alembic import op
@@ -13,7 +13,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
-revision = '920edcf3f5f2'
+revision = '9407fa56c18d'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -65,6 +65,19 @@ def upgrade():
 
     if environment == "production":
         op.execute(f"ALTER TABLE carts SET SCHEMA {SCHEMA};")
+
+    op.create_table('favorites',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('product_id', sa.Integer(), nullable=False),
+    sa.Column('created_at', sa.Date(), nullable=False),
+    sa.ForeignKeyConstraint(['product_id'], ['products.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE favorites SET SCHEMA {SCHEMA};")
 
     op.create_table('reviews',
     sa.Column('id', sa.Integer(), nullable=False),

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../context/Modal";
 import { signUp } from "../../store/session";
+import { FcGoogle } from "react-icons/fc";
 import "../CSS/mycss.css"
 
 function SignupFormModal() {
@@ -52,7 +53,10 @@ function SignupFormModal() {
 	return (
 		<div className="sign-up-container">
 			<h1 className="Sign-up-h1">Join the Squad</h1>
-			<p className="signp">(Or login with google on login form)</p>
+			{/* Google Auth */}
+			<a href={"/api/auth/oauth_login"} className="submit-goog">
+				<button className="submit-login-goog"><FcGoogle className="google-icon" />Sign up with Google</button>
+			</a>
 			<form onSubmit={handleSubmit}>
 				<div>
 					{errors && errors.length >= 1 && errors.map((error, idx) => (

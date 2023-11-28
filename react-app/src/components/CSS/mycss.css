@@ -590,6 +590,10 @@ justify-content: space-between;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
  }
 
+  .submit-goog{
+text-decoration: none;
+ }
+
  .login-form{
   font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
   display: flex;
@@ -656,17 +660,17 @@ justify-content: space-between;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
+   text-decoration: none;
    font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
 
-.google-icon{
-  margin-left: 5px;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px red;
+.google-icon {
+  margin-right: 8px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 8px;
 }
-
-
 
 .login-form input {
   border-radius: 5px;
@@ -863,6 +867,7 @@ justify-content: space-between;
 }
 
 
+
 .detail-content{
 display: flex;
 }
@@ -870,7 +875,7 @@ display: flex;
 .detail-photo{
 width: 399px;
     height: 413px;
-    margin-top: 111px;
+    margin-top: 129px;
     border-radius: 10px;
     box-shadow: 0px 0px 8px #ddd;
     margin-left: 23px;
@@ -1142,14 +1147,6 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
    background-color: #212124;
 }
 
-.filled-cart {
-  color: yellow;
-}
-
-.unfilled-cart {
-  color: white;
-}
-
 .cart-button{
   margin: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -1159,6 +1156,18 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
     width: 156px;
     cursor: pointer;
     height: 33px;
+}
+
+.cart-button1{
+    margin-left: 137px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    border: none;
+    font-size: 11pt;
+    width: 156px;
+    cursor: pointer;
+    height: 33px;
+    background-color: white;
 }
 
 /* Shopping Cart */
@@ -1242,6 +1251,29 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
     box-shadow: 2px 2px 8px #ddd;
 }
 
+.shopping-photo2{
+  height: 200px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px #ddd;
+}
+
+.shopping-photo1 {
+  height: 464px;
+  width: 760px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px #ddd;
+    margin-bottom: 110px;
+}
+.empty-fav-photo{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 65px;
+    height: 325px;
+}
+
 .green-day{
    font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
     color: #222222;
@@ -1256,6 +1288,15 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   border-radius: 10px;
   display: flex;
   justify-self: flex-start;
+  width: 540px;
+  margin-bottom: 25px;
+}
+
+.product-container-cart1{
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-self: center;
   width: 540px;
   margin-bottom: 25px;
 }
@@ -1470,5 +1511,4 @@ font-size: 31px;
   align-items: center;
   font-weight: 400;
   justify-content: center;
-
 }
