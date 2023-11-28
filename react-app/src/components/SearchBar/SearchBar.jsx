@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import "../SearchBar/SearchBar.css";
 
@@ -25,6 +25,19 @@ const SearchBar = ({ setResults, setIsResultsOpen }) => {
     setSearch(value);
     fetchData(value);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+
+      setSearch("")
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className='input-wrapper'>

@@ -10,6 +10,7 @@ import CreateReviewForm from "../../Reviews/CreateReview";
 import UpdateReviewModal from "../../Reviews/UpdateReview";
 import DeleteReviewModal from "../../Reviews/DeleteReviewModal";
 import CartItems from "../../Cart/cartItems"
+import FavoriteTracker from "../../Favorites/favorite-tracker"
 
 
 const renderStars = (stars) => {
@@ -75,6 +76,7 @@ export default function ProductDetailPage() {
             <div className="detail-content">
                 <div className="photo-container">
                     <img className="detail-photo" src={product.photoUrl} alt="" />
+                    <FavoriteTracker productId={id} userId={user.id} />
                     <div className="Product-Details-Buttons">
                         {user.id === product.ownerId && (
                             <div>
