@@ -1,11 +1,22 @@
-!!!!!! PASTE BELOW VERSION !!!!!!!
+"""empty message
 
+Revision ID: 9407fa56c18d
+Revises:
+Create Date: 2023-11-27 17:43:39.108235
 
+"""
 from alembic import op
 import sqlalchemy as sa
 import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
+
+
+# revision identifiers, used by Alembic.
+revision = '9407fa56c18d'
+down_revision = None
+branch_labels = None
+depends_on = None
 
 
 def upgrade():
