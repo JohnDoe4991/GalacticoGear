@@ -63,6 +63,7 @@ function ProfileButton({ user }) {
               />
             </div>
             <button onClick={() => history.push("/carts")}>Shopping Cart</button>
+            <button onClick={() => history.push("/favorites")}>Favorites</button>
             <div>
               <button className="prof-button1" onClick={handleLogout}>Log Out</button>
             </div>

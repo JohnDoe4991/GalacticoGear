@@ -17,6 +17,7 @@ export default function ShoppingCart() {
         (oneCart) => oneCart.userId === user.id
     );
 
+
     useEffect(() => {
         dispatch(thunkGetAllCarts());
         dispatch(getAllProductsThunk());
