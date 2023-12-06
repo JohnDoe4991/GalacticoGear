@@ -752,17 +752,12 @@ text-decoration: none;
 }
 
 .confirm-delete2{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .delete-writing2{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
 }
 
 .delete-da-bttn2{
@@ -771,13 +766,11 @@ text-decoration: none;
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -791,13 +784,11 @@ text-decoration: none;
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -815,11 +806,8 @@ text-decoration: none;
 }
 
 .update-review1{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-      font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 /* Product Detail Page  */
@@ -980,7 +968,7 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   flex-direction: column;
   align-items: center;
   width: 264px;
-  height: 336px;
+  height: 410px;
 }
 
 .product-review-container textarea{
@@ -994,8 +982,7 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   display: flex;
     justify-content: center;
     font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-    color: white;
-    text-shadow: 2px 2px 0 black, 2px 2px 4px gold;
+    color: black;
     margin:5px;
 }
 
@@ -1014,16 +1001,13 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   display: flex;
   justify-content: center;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color: white;
-  text-shadow: 2px 2px 0 black, 2px 2px 4px gold;
+  color: black;
+  font-size: 15px;
 }
 
 .product-reviewh1{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-      font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .errors-one1{
@@ -1062,11 +1046,10 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;
@@ -1081,11 +1064,10 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 17px;
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;
