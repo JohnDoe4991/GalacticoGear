@@ -113,15 +113,12 @@
 }
 
 .style-file-upload {
-  background-color: royalblue;
+  background-color: white;
   color: white;
   border: 1px black solid;
-  border-radius: 5px;
+  border-radius: 40px;
   padding: 5px;
   box-shadow: 2px 2px black;
-}
-
-.style-file-upload:hover {
   cursor: pointer;
 }
 
@@ -137,12 +134,9 @@
   display: flex;
   flex-direction: row;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
   margin-left: 28px;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .create-product-form {
@@ -158,10 +152,7 @@
   display: flex;
   justify-content: center;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
 }
 
 .create-product-submit {
@@ -170,12 +161,11 @@
    align-items: center;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: white;
    /* margin-left: 56px; */
-   box-shadow: 1px 5px 1px black;
-   color: white;
+   color: black;
    font-size: 15px;
    margin-top: 10px;
    cursor: pointer;
@@ -607,21 +597,21 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color: black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
  }
 
  .login-form label {
   display: flex;
   justify-content: center;
-  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  color:black;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .submit-login {
@@ -630,17 +620,15 @@ text-decoration: none;
    align-items: center;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
-   /* margin-left: 56px; */
-   box-shadow: 1px 5px 1px black;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: black;
    color: white;
    font-size: 15px;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
-   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+   font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
 }
 
 .submit-login-goog{
@@ -650,18 +638,17 @@ text-decoration: none;
    text-decoration: none;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: white;
    margin-left: 53px;
-   box-shadow: 1px 5px 1px black;
-   color: white;
+   color: black;
    font-size: 15px;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
    text-decoration: none;
-   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+   font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
 }
 
 .google-icon {
@@ -684,11 +671,8 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .sign-up-container form {
@@ -700,7 +684,7 @@ text-decoration: none;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
 
-.signp{
+.signp {
    font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -730,12 +714,10 @@ text-decoration: none;
 
 .sign-up-container label {
   display: flex;
-  justify-content: center;
+  margin-bottom:3px;
+    font-size: 12px;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color: black;
 }
 
 .sign-up-container input {
@@ -743,7 +725,9 @@ text-decoration: none;
   border-radius: 5px;
   border: none;
   box-shadow: 0px 0px 8px #ddd;
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .sign-up-container button[type="submit"] {
@@ -752,11 +736,10 @@ text-decoration: none;
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: #9A9A9A;
   /* margin-left: 56px; */
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;

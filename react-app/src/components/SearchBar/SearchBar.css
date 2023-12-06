@@ -33,7 +33,7 @@ input:focus {
 
 .results-list {
     position: absolute;
-    top: 52px;
+    top: 63px;
     font-size: 10pt;
     background-color: white;
     display: flex;

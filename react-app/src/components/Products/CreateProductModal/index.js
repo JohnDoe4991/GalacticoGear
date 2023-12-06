@@ -97,7 +97,7 @@ export default function CreateProductModal() {
                             key={key}
                         />Upload Image
                     </label>
-                    <div>{image !== null ? image["name"] : "Choose Image"}</div>
+                    <div>{image !== null ? image["name"] : ""}</div>
                 </div>
 
 
@@ -160,7 +160,7 @@ export default function CreateProductModal() {
                     type="submit"
                     disabled={Object.keys(validationObject).length > 0}
                 >
-                    Submit
+                    Post Product
                 </button>
                 {imageLoading && (<div aria-busy="true" aria-describedby="progress-bar">
                     <progress id="progress-bar" aria-label="Content loading…"></progress>

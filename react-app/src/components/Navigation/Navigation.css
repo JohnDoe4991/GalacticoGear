@@ -17,6 +17,7 @@ cursor:pointer;
   width: 1002px;
   display: flex;
     margin-top: 14px;
+    align-items: center;
 }
 
 .results-container{
@@ -28,15 +29,20 @@ cursor:pointer;
 
 .profile-dropdown{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #0e2929;
     border-radius: 10px;
-    height: 126px;
+    height: 280px;
     padding: 4px;
     text-shadow:
       2px 2px 0 black,
       2px 2px 4px gold;
       color:white;
       box-shadow: 0px 0px 8px #ddd;
+      top:61px;
 }
 
 
@@ -61,7 +67,14 @@ cursor:pointer;
 .prof-container button {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
   background-color: transparent;
-  margin:3px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  margin-left: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   border:none;
   border-radius: 5px;
   box-shadow: 0px 0px 8px #ddd;
@@ -83,6 +96,18 @@ cursor:pointer;
 .prof-dets {
   margin-top: 3px;
     margin-bottom: 3px;
+}
+
+.prof-dets1 {
+  margin-left: 16px;
+    margin-bottom: 66px;
+    margin-top: -3px;
+    margin-right: -15px;
+    width: 168px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
 }
 
 .nav-h3{

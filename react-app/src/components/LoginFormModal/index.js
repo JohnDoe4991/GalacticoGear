@@ -36,10 +36,10 @@ function LoginFormModal() {
 
   return (
     <div className="login-form-container">
-      <h1 className="login-h1">Log In</h1>
+      <h1 className="login-h1">Sign In</h1>
       {/* Google Auth */}
       <a href={"/api/auth/oauth_login"} className="submit-goog">
-        <button className="submit-login-goog"><FcGoogle className="google-icon" />Sign in with Google</button>
+        <button className="submit-login-goog"><FcGoogle className="google-icon" />Continue with Google</button>
       </a>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="error">
@@ -71,10 +71,10 @@ function LoginFormModal() {
 
         </div>
         <div>
-          <button className="submit-login" type="submit">Log In</button>
+          <button className="submit-login" type="submit">Sign In</button>
         </div>
         <div>
-          <button className="submit-login" onClick={handleDemo} id="demo-button">Log in as Demo User</button>
+          <button className="submit-login" onClick={handleDemo} id="demo-button">Sign in as Demo User</button>
         </div>
       </form >
     </div >
