@@ -23,7 +23,6 @@ export default function DeleteReviewModal({ reviewId, id }) {
     return (
         <div id="delete-review-modal-container">
             <h1 className="confirm-delete2">Delete Review</h1>
-            <p className="delete-writing2">Are you sure you want to remove this review?</p>
             <button
                 className="delete-da-bttn2"
                 onClick={handleSubmit}

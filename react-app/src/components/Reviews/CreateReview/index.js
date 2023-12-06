@@ -66,12 +66,14 @@ export default function CreateReviewForm({ productId }) {
     return (
         <div className="product-review-container">
             <h1 className="product-reviewh1">Post Review</h1>
-            <div className="error-box">
-                {validationObject.review && (
-                    <p className="errors-one1"> {validationObject.review}</p>
-                )}
-            </div>
+
             <form onSubmit={handleSubmit} className="review-form-container">
+                <h3 className="review-h3">Review</h3>
+                <div className="error-box">
+                    {validationObject.review && (
+                        <p className="errors-one1"> {validationObject.review}</p>
+                    )}
+                </div>
                 <label>
                     <textarea
                         type="text"
@@ -81,6 +83,7 @@ export default function CreateReviewForm({ productId }) {
                         onChange={(e) => setReview(e.target.value)}
                     />
                 </label>
+                <h3 className="review-h3">Rating</h3>
                 {validationObject.selectedStars && (
                     <p className="errors-one12"> {validationObject.selectedStars}</p>
                 )}
@@ -97,7 +100,6 @@ export default function CreateReviewForm({ productId }) {
                             {selectedStars >= star ? '🏆' : '⚽️'}
                         </span>
                     ))}
-                    Trophies
                 </div>
 
                 <button

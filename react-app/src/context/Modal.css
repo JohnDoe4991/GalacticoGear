@@ -20,7 +20,7 @@
 
 #modal-content {
   position: absolute;
-  background: linear-gradient(135deg, #ffd700, #0000cd);
+  background: white;
   border-radius: 22px;
   box-shadow: 0px 0px 8px #ddd;
 }

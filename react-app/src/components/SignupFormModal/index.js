@@ -55,7 +55,7 @@ function SignupFormModal() {
 			<h1 className="Sign-up-h1">Join the Squad</h1>
 			{/* Google Auth */}
 			<a href={"/api/auth/oauth_login"} className="submit-goog">
-				<button className="submit-login-goog"><FcGoogle className="google-icon" />Sign up with Google</button>
+				<button className="submit-login-goog"><FcGoogle className="google-icon" />Continue with Google</button>
 			</a>
 			<form onSubmit={handleSubmit}>
 				<div>
@@ -63,9 +63,7 @@ function SignupFormModal() {
 						<div className="error" key={idx}>{error}</div>
 					))}
 				</div>
-				<label>
-					First Name
-				</label>
+				<label>First Name</label>
 				{errors.firstName && <p className="errors-one-product">{errors.firstName}</p>}
 				<input
 					type="text"
@@ -74,9 +72,7 @@ function SignupFormModal() {
 					onChange={(e) => setFirstName(e.target.value)}
 					required
 				/>
-				<label>
-					Last Name
-				</label>
+				<label>Last Name</label>
 				{errors.lastName && <p className="errors-one-product">{errors.lastName}</p>}
 				<input
 					type="text"
@@ -85,9 +81,7 @@ function SignupFormModal() {
 					onChange={(e) => setLastName(e.target.value)}
 					required
 				/>
-				<label>
-					Email
-				</label>
+				<label>Email</label>
 				{errors.email && <p className="errors-one-product">{errors.email}</p>}
 				<input
 					type="text"
@@ -96,9 +90,7 @@ function SignupFormModal() {
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
-				<label>
-					Username
-				</label>
+				<label>Username</label>
 				{errors.username && <p className="errors-one-product">{errors.username}</p>}
 				<input
 					type="text"
@@ -107,9 +99,7 @@ function SignupFormModal() {
 					onChange={(e) => setUsername(e.target.value)}
 					required
 				/>
-				<label>
-					Password
-				</label>
+				<label>Password</label>
 				{errors.password && <p className="errors-one-product">{errors.password}</p>}
 				<input
 					type="password"
@@ -118,9 +108,7 @@ function SignupFormModal() {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				<label>
-					Confirm Password
-				</label>
+				<label>Confirm Password</label>
 				{errors.confirmPassword && (
 					<p className="errors-one-product">{errors.confirmPassword}</p>
 				)}

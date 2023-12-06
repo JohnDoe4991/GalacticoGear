@@ -31,9 +31,6 @@ export default function DeleteProductModal({ productId }) {
     return (
         <div id="delete-product-modal-container">
             <h1 className="confirm-delete1">Delete Product</h1>
-            <p className="delete-writing">
-                Are you sure you want to remove this Product?
-            </p>
             <button className="delete-da-bttn" onClick={handleSubmit}>
                 Yes (Delete Product)
             </button>
