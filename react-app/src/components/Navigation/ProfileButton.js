@@ -62,17 +62,23 @@ function ProfileButton({ user }) {
                 }
               />
             </div>
-            <button onClick={() => history.push("/carts")}>Shopping Cart</button>
+            <div>
+              <button onClick={() => history.push("/carts")}>Shopping Cart</button>
+            </div>
             <button onClick={() => history.push("/favorites")}>Favorites</button>
+
             <div>
               <button className="prof-button1" onClick={handleLogout}>Log Out</button>
             </div>
           </>
         ) : (
           <div className="not-logged-in">
+            <div className="no-log">
+              <h4 className="prof-dets1">Welcome to GalacticoGear</h4>
+            </div>
             <OpenModalButton
 
-              buttonText="Log In"
+              buttonText="Sign In"
               onItemClick={closeMenu}
               modalComponent={<LoginFormModal />}
             />

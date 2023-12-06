@@ -81,13 +81,13 @@ export default function UpdateReviewModal({ reviewId }) {
     return (
         <div className="update-review-container">
             <h1 className="update-review1">Update Review</h1>
-            <div className="error-box">
-                {validationObject.review && (
-                    <p className="errors-one3"> {validationObject.review}</p>
-                )}
-            </div>
             <form onSubmit={handleSubmit} className="review-form-container">
                 <h3 className="review-h3">Review</h3>
+                <div className="error-box">
+                    {validationObject.review && (
+                        <p className="errors-one3"> {validationObject.review}</p>
+                    )}
+                </div>
                 <label>
                     <textarea
                         type="text"
@@ -100,6 +100,7 @@ export default function UpdateReviewModal({ reviewId }) {
                 {validationObject.selectedStars && (
                     <p className="errors-one4"> {validationObject.selectedStars}</p>
                 )}
+                <h3 className="review-h3">Rating</h3>
                 <div className="star-rating">
                     {[1, 2, 3, 4, 5].map((star) => (
                         <span
@@ -115,7 +116,6 @@ export default function UpdateReviewModal({ reviewId }) {
                             {selectedStars >= star ? '🏆' : '⚽️'}
                         </span>
                     ))}
-                    Trophies
                 </div>
 
                 <button

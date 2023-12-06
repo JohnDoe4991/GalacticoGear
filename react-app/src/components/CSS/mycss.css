@@ -113,15 +113,11 @@
 }
 
 .style-file-upload {
-  background-color: royalblue;
+  background-color: white;
   color: white;
   border: 1px black solid;
-  border-radius: 5px;
+  border-radius: 40px;
   padding: 5px;
-  box-shadow: 2px 2px black;
-}
-
-.style-file-upload:hover {
   cursor: pointer;
 }
 
@@ -137,12 +133,9 @@
   display: flex;
   flex-direction: row;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
   margin-left: 28px;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .create-product-form {
@@ -158,10 +151,7 @@
   display: flex;
   justify-content: center;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
 }
 
 .create-product-submit {
@@ -170,11 +160,10 @@
    align-items: center;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: black;
    /* margin-left: 56px; */
-   box-shadow: 1px 5px 1px black;
    color: white;
    font-size: 15px;
    margin-top: 10px;
@@ -203,7 +192,11 @@
 }
 
 .create-product-form label {
-  margin: 10px;
+  display: flex;
+  margin:7px;
+    font-size: 12px;
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: black;
 }
 
 .create-product-form input {
@@ -234,16 +227,13 @@
   display: flex;
   flex-direction: row;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-      margin-left: 37px;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color:black;
+  margin-left: 37px;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .update-product-form {
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
   display: flex;
   flex-direction: column;
 
@@ -253,12 +243,10 @@
 
 .update-product-form label {
   display: flex;
-  justify-content: center;
+  margin-bottom:3px;
+    font-size: 12px;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color: black;
 }
 
 .submit-update-product {
@@ -267,11 +255,10 @@
    align-items: center;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: black;
    /* margin-left: 56px; */
-   box-shadow: 1px 5px 1px black;
    color: white;
    font-size: 15px;
    margin-top: 10px;
@@ -320,17 +307,8 @@
 }
 
 .confirm-delete1{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-}
-
-.delete-writing{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .delete-da-bttn{
@@ -339,13 +317,11 @@
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: #5380fa;
+  border-radius: 40px;
+  border: 1px solid black;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -359,13 +335,11 @@
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -607,21 +581,21 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color: black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
  }
 
  .login-form label {
   display: flex;
   justify-content: center;
-  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  color:black;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .submit-login {
@@ -630,17 +604,15 @@ text-decoration: none;
    align-items: center;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
-   /* margin-left: 56px; */
-   box-shadow: 1px 5px 1px black;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: black;
    color: white;
    font-size: 15px;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
-   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+   font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
 }
 
 .submit-login-goog{
@@ -650,18 +622,17 @@ text-decoration: none;
    text-decoration: none;
    width: 198px;
    height: 30px;
-   border-radius: 5px;
-   border: none;
-   background-color: #5380fa;
+   border-radius: 40px;
+   border: 1px solid black;
+   background-color: white;
    margin-left: 53px;
-   box-shadow: 1px 5px 1px black;
-   color: white;
+   color: black;
    font-size: 15px;
    margin-top: 10px;
    cursor: pointer;
    margin-bottom: 10px;
    text-decoration: none;
-   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+   font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
 }
 
 .google-icon {
@@ -684,11 +655,8 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   font-weight: normal;
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .sign-up-container form {
@@ -700,7 +668,7 @@ text-decoration: none;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
 
-.signp{
+.signp {
    font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -730,12 +698,10 @@ text-decoration: none;
 
 .sign-up-container label {
   display: flex;
-  justify-content: center;
+  margin-bottom:3px;
+    font-size: 12px;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color: black;
 }
 
 .sign-up-container input {
@@ -743,7 +709,9 @@ text-decoration: none;
   border-radius: 5px;
   border: none;
   box-shadow: 0px 0px 8px #ddd;
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .sign-up-container button[type="submit"] {
@@ -752,11 +720,10 @@ text-decoration: none;
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: #9A9A9A;
   /* margin-left: 56px; */
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;
@@ -785,17 +752,12 @@ text-decoration: none;
 }
 
 .confirm-delete2{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .delete-writing2{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
+  color:black;
 }
 
 .delete-da-bttn2{
@@ -804,13 +766,11 @@ text-decoration: none;
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -824,13 +784,11 @@ text-decoration: none;
   align-items: center;
   width: 168px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
   margin-right: 18px;
-
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -848,11 +806,8 @@ text-decoration: none;
 }
 
 .update-review1{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-      font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color: black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 /* Product Detail Page  */
@@ -1013,7 +968,7 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   flex-direction: column;
   align-items: center;
   width: 264px;
-  height: 336px;
+  height: 410px;
 }
 
 .product-review-container textarea{
@@ -1027,8 +982,7 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   display: flex;
     justify-content: center;
     font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-    color: white;
-    text-shadow: 2px 2px 0 black, 2px 2px 4px gold;
+    color: black;
     margin:5px;
 }
 
@@ -1047,16 +1001,13 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   display: flex;
   justify-content: center;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
-  color: white;
-  text-shadow: 2px 2px 0 black, 2px 2px 4px gold;
+  color: black;
+  font-size: 15px;
 }
 
 .product-reviewh1{
-  color:white;
-  text-shadow:
-      2px 2px 0 black,
-      2px 2px 4px gold;
-      font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  color:black;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
 }
 
 .errors-one1{
@@ -1095,11 +1046,10 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 18px;
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;
@@ -1114,11 +1064,10 @@ font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Ar
   align-items: center;
   width: 198px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 40px;
   border: none;
-  background-color: #5380fa;
+  background-color: black;
   margin-left: 17px;
-  box-shadow: 1px 5px 1px black;
   color: white;
   font-size: 15px;
   margin-top: 10px;
