@@ -43,6 +43,7 @@ cursor:pointer;
       color:white;
       box-shadow: 0px 0px 8px #ddd;
       top:61px;
+      max-width: 176px;
 }
 
 
@@ -95,7 +96,11 @@ cursor:pointer;
 
 .prof-dets {
   margin-top: 3px;
-    margin-bottom: 3px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 160px;
 }
 
 .prof-dets1 {
