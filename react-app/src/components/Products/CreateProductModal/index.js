@@ -97,7 +97,7 @@ export default function CreateProductModal() {
                             key={key}
                         />Upload Image
                     </label>
-                    <div>{image !== null ? image["name"] : ""}</div>
+                    <div>{image !== null ? image["name"] : "No file chosen"}</div>
                 </div>
 
 
