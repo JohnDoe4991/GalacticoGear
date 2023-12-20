@@ -53,3 +53,8 @@ input:focus {
 .search-result:hover{
     background-color: #efefef;
 }
+
+.no-results {
+    padding: 10px 20px;
+    font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}

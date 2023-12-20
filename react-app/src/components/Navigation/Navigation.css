@@ -125,3 +125,21 @@ cursor:pointer;
       2px 2px 0 white,
       2px 2px 4px gold;
 }
+
+.profile-button-container{
+  display: flex;
+}
+
+.cart-icon{
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+  background-color: transparent;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 5px;
+  color:black;
+}

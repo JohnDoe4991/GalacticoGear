@@ -17,6 +17,7 @@ export default function GetProducts() {
 
     const user = useSelector((state) => state.session.user);
 
+
     productsToDisplay.reverse();
 
     function calculateAverageRatings(reviews) {
@@ -78,6 +79,7 @@ export default function GetProducts() {
                 <h1 className="page-break"><span className="sponsor">Sponsored by</span> Galactico sellers</h1>
                 <h3 className="page-breakh3">Fun fact: behind every sponsored item there is an Galactico seller hoping you'll check out their shop</h3>
             </div>
+            <div className="welcome">Welcome back, {user.firstName}!</div>
             <div className="all-products-small-container">
                 {productsToDisplay.map((product) => (
                     <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>

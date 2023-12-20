@@ -6,6 +6,7 @@ import './Navigation.css';
 import SearchBar from '../SearchBar/SearchBar';
 import ResultsList from '../SearchBar/ResultsList';
 import galacticoGear from "../../images/galacticoGear.png"
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
@@ -51,6 +52,7 @@ function Navigation({ isLoaded }) {
 				{isLoaded && (
 					<div className="profile-button-container">
 						<ProfileButton user={sessionUser} showMenu={showMenu} />
+						<a href='/carts' className='cart-icon'><AiOutlineShoppingCart /></a>
 					</div>
 				)}
 			</div>

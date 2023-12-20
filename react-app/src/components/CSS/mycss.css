@@ -440,6 +440,7 @@
     max-width: 1002px;
     margin: 0 auto;
     margin-top: 7px;
+    margin-bottom: 20px;
  }
 
  .userproducts-images{
@@ -1460,4 +1461,13 @@ font-size: 31px;
   align-items: center;
   font-weight: 400;
   justify-content: center;
+}
+
+.welcome{
+  margin-top: 30px;
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+    font-size: 19.01px;
+    line-height: 1.4;
+    letter-spacing: .09505px;
 }
