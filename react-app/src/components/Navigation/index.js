@@ -54,12 +54,12 @@ function Navigation({ isLoaded }) {
 				{isLoaded && (
 					<div className="profile-button-container">
 						<ProfileButton user={sessionUser} showMenu={showMenu} />
-						<Tooltip text="Cart" className='cart-icon'>
+						{sessionUser && (<Tooltip text="Cart" className='cart-icon'>
 							<a href='/carts' className='cart-icon'><AiOutlineShoppingCart /></a>
-						</Tooltip>
-						<Tooltip text="Favorites" className='fav-icon'>
+						</Tooltip>)}
+						{sessionUser && (<Tooltip text="Favorites" className='fav-icon'>
 							<a href='/favorites' className='fav-icon'><MdFavoriteBorder /></a>
-						</Tooltip>
+						</Tooltip>)}
 					</div>
 				)}
 			</div>
