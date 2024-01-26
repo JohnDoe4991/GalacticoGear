@@ -94,40 +94,45 @@ export default function GetProducts() {
             </div>
 
             <div className="items-you-like">
-            <div className="welcome">Welcome back, {user.firstName}!</div>
+                <div className="welcome">
+                    Welcome back, {"  "} <span className="user-name"> {" "} {user.firstName} </span>!
+                </div>
+
                 <h3 className="items-you-like-h3">Items you might be interested in</h3>
-                {productsToDisplay.map((product) => (
-                    <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
-                        <img
-                            src={product.photoUrl}
-                            alt=""
-                            className="userproducts-images"
-                        ></img>
-                        <div className="Product-Details-Buttons1">
-                            {user.id === product.ownerId && (
-                                <div className="product-bttns">
-                                    <OpenModalButton
-                                        buttonText="Update Product"
-                                        modalComponent={<UpdateProductModal productId={product.id} />}
-                                    />
-                                    <OpenModalButton
-                                        buttonText="Delete Product"
-                                        modalComponent={
-                                            <DeleteProductModal
-                                                productId={product.id}
-                                            />
-                                        }
-                                    />
-                                </div>
-                            )}
+                <Masonry
+                    breakpointCols={3}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                >
+                    {productsToDisplay.map((product) => (
+                        <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                            <div className="product-image-container">
+                                <img src={product.photoUrl} alt="" className="trending-images" />
+                                <div className="price-tag">${product.price}</div>
+                            </div>
+                            <div className="Product-Details-Buttons1">
+                                {user.id === product.ownerId && (
+                                    <div className="product-bttns">
+                                        <OpenModalButton
+                                            buttonText="Update Product"
+                                            modalComponent={<UpdateProductModal productId={product.id} />}
+                                        />
+                                        <OpenModalButton
+                                            buttonText="Delete Product"
+                                            modalComponent={
+                                                <DeleteProductModal
+                                                    productId={product.id}
+                                                />
+                                            }
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                            <div className="row2">
+                            </div>
                         </div>
-                        <div className="row1">
-                            <p>${product.price}</p>
-                        </div>
-                        <div className="row2">
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </Masonry>
             </div>
             <div className="more-jerseys">
                 <h3 className="more-jerseys-h3">Historia que tú hiciste
