@@ -16,18 +16,18 @@ export default function GetProducts() {
     const getAllProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
     const allProductsArray = Object.values(getAllProducts).reverse();
+    const newImg = allProductsArray[0];
 
 
-    const productsToDisplay = allProductsArray.slice(0, 7);
-    const productsToDisplay1 = allProductsArray.slice(7, 14);
+
+
+    const productsToDisplay = allProductsArray.slice(1, 5);
+    const productsToDisplay1 = allProductsArray.slice(5, 14);
     const productsToDisplay2 = allProductsArray.slice(14);
 
 
     const user = useSelector((state) => state.session.user);
 
-
-    productsToDisplay.reverse();
-    productsToDisplay.length = 7;
 
 
 
@@ -99,40 +99,44 @@ export default function GetProducts() {
                 </div>
 
                 <h3 className="items-you-like-h3">Items you might be interested in</h3>
-                <Masonry
-                    breakpointCols={3}
-                    className="my-masonry-grid"
-                    columnClassName="my-masonry-grid_column"
-                >
-                    {productsToDisplay.map((product) => (
-                        <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                <div className="all-photoz">
+                    <div className="preview" onClick={() => push(`/products/${newImg.id}`)}>
+                        {newImg && (
                             <div className="product-image-container">
-                                <img src={product.photoUrl} alt="" className="trending-images" />
-                                <div className="price-tag">${product.price}</div>
+                                <img className="preview-img" src={newImg.photoUrl} alt={newImg.title} />
+                                <div className="price-tag">${newImg.price}</div>
                             </div>
-                            <div className="Product-Details-Buttons1">
-                                {user.id === product.ownerId && (
-                                    <div className="product-bttns">
-                                        <OpenModalButton
-                                            buttonText="Update Product"
-                                            modalComponent={<UpdateProductModal productId={product.id} />}
-                                        />
-                                        <OpenModalButton
-                                            buttonText="Delete Product"
-                                            modalComponent={
-                                                <DeleteProductModal
-                                                    productId={product.id}
-                                                />
-                                            }
-                                        />
-                                    </div>
-                                )}
+                        )}
+                    </div>
+                    <div className="bott-photoz">
+                        {productsToDisplay.map((product) => (
+                            <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                                <div className="product-image-container">
+                                    <img src={product.photoUrl} alt="" className="trending-images" />
+                                    <div className="price-tag">${product.price}</div>
+                                </div>
+                                <div className="Product-Details-Buttons1">
+                                    {user.id === product.ownerId && (
+                                        <div className="product-bttns">
+                                            <OpenModalButton
+                                                buttonText="Update Product"
+                                                modalComponent={<UpdateProductModal productId={product.id} />}
+                                            />
+                                            <OpenModalButton
+                                                buttonText="Delete Product"
+                                                modalComponent={
+                                                    <DeleteProductModal
+                                                        productId={product.id}
+                                                    />
+                                                }
+                                            />
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                            <div className="row2">
-                            </div>
-                        </div>
-                    ))}
-                </Masonry>
+                        ))}
+                    </div>
+                </div>
             </div>
             <div className="more-jerseys">
                 <h3 className="more-jerseys-h3">Historia que tú hiciste

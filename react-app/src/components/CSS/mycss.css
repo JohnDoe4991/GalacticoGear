@@ -494,12 +494,15 @@
 }
 
 .trending-images {
-  width: 100%;
+  height: 140px;
+  width: 188px;
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
   margin: 10px;
+  padding:10px;
   max-width: 260px;
   max-height: 200px;
+  cursor: pointer;
 }
 
 .price-tag {
@@ -514,6 +517,7 @@
     border-radius: 20px; /* Gives the pill shape */
     font-weight: bold; /* Makes the price text bold */
     text-align: center;
+    cursor: pointer;
 }
 
 
@@ -1516,4 +1520,65 @@ font-size: 31px;
 
 .user-name {
   font-weight: bold;
+}
+
+.items-you-like-h3{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: .08px;
+}
+
+.annoying-photos{
+  gap:10px;
+  position:absolute;
+  top:0;
+  left:0;
+  object-fit: cover ;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.four-guys{
+  display:inline-block;
+  width:49.6%;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  height: 100%;
+
+}
+
+.photos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.preview img {
+  display:inline-block;
+  height: 347px;
+border-radius: 5px;
+  position: relative;
+  width: 50%;
+  width: 392px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.all-photoz{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bott-photoz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.single-product {
+  width: calc(33.333% - 10px); /* Adjust the 10px for margin */
+  margin: 20px; /* Half of 10px to have space between items */
 }
