@@ -6,19 +6,30 @@ import OpenModalButton from "../../OpenModalButton";
 import UpdateProductModal from "../UpdateProductModal";
 import DeleteProductModal from "../DeleteProductModal";
 import { GetAllReviewsThunk } from "../../../store/reviews";
+import Masonry from "react-masonry-css";
+
+
 
 export default function GetProducts() {
     const { push } = useHistory();
     const dispatch = useDispatch();
     const getAllProducts = useSelector((state) => state.products.allProducts);
     const reviews = useSelector((state) => state.reviews.allReviews)
+    const allProductsArray = Object.values(getAllProducts).reverse();
 
-    const productsToDisplay = Object.values(getAllProducts);
+
+    const productsToDisplay = allProductsArray.slice(0, 7);
+    const productsToDisplay1 = allProductsArray.slice(7, 14);
+    const productsToDisplay2 = allProductsArray.slice(14);
+
 
     const user = useSelector((state) => state.session.user);
 
 
     productsToDisplay.reverse();
+    productsToDisplay.length = 7;
+
+
 
     function calculateAverageRatings(reviews) {
         const productRatings = {};
@@ -63,6 +74,8 @@ export default function GetProducts() {
         push(`/products/${product?.id}`);
     }, [push]);
 
+
+
     return (
         <div className="allproducts-container">
             <div className="top-logo">
@@ -79,11 +92,12 @@ export default function GetProducts() {
                 <h1 className="page-break"><span className="sponsor">Sponsored by</span> Galactico sellers</h1>
                 <h3 className="page-breakh3">Fun fact: behind every sponsored item there is an Galactico seller hoping you'll check out their shop</h3>
             </div>
+
+            <div className="items-you-like">
             <div className="welcome">Welcome back, {user.firstName}!</div>
-            <div className="all-products-small-container">
+                <h3 className="items-you-like-h3">Items you might be interested in</h3>
                 {productsToDisplay.map((product) => (
                     <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
-                        <h2 className="product-title">{product.title}</h2>
                         <img
                             src={product.photoUrl}
                             alt=""
@@ -109,13 +123,57 @@ export default function GetProducts() {
                         </div>
                         <div className="row1">
                             <p>${product.price}</p>
-                            <p>🏆 {averageRatings[product.id] ? averageRatings[product.id].toFixed(1) : 'New'}</p>
                         </div>
                         <div className="row2">
-                            <p>{product.size}</p>
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="more-jerseys">
+                <h3 className="more-jerseys-h3">Historia que tú hiciste
+                    Historia por hacer
+                    Porque nadie resiste
+                    Tus ganas de vencer</h3>
+                {productsToDisplay1.map((product) => (
+                    <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                        <img
+                            src={product.photoUrl}
+                            alt=""
+                            className="userproducts-images"
+                        ></img>
+                    </div>
+
+                ))}
+            </div>
+            <div className="more-jerseys">
+                <h3 className="more-jerseys-h3">Ya salen las estrellas
+                    Mi viejo Chamartín
+                    De lejos y de cerca
+                    Nos traes hasta aquí
+                    Llevo tu camiseta
+                    Pegada al corazón
+                    Los días que tú juegas
+                    Son todo lo que soy
+                </h3>
+                {productsToDisplay2.map((product) => (
+                    <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                        <img
+                            src={product.photoUrl}
+                            alt=""
+                            className="userproducts-images"
+                        ></img>
+                    </div>
+                ))}
+                <h3 className="more-jerseys-h3">Ya corre la saeta
+                    Ya ataca mi Madrid
+                    Soy lucha, soy belleza
+                    El grito que aprendí
+                    Madrid, Madrid, Madrid
+                    ¡Hala Madrid!
+                    Y nada más
+                    Y nada más
+                    ¡Hala Madrid!
+                </h3>
             </div>
             <div className="what-is-container">
                 <h1 className="what-is-h1">What is GalacticoGear?</h1>
