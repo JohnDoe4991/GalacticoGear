@@ -14,10 +14,16 @@ export default function GetProducts() {
     const { push } = useHistory();
     const dispatch = useDispatch();
     const getAllProducts = useSelector((state) => state.products.allProducts);
-    const reviews = useSelector((state) => state.reviews.allReviews)
     const allProductsArray = Object.values(getAllProducts).reverse();
     const newImg = allProductsArray[0];
 
+
+    const shuffleArray = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
+
+    const randomProductsToDisplay = shuffleArray([...allProductsArray]).slice(0, 6);
 
 
 
@@ -27,42 +33,6 @@ export default function GetProducts() {
 
 
     const user = useSelector((state) => state.session.user);
-
-
-
-
-    function calculateAverageRatings(reviews) {
-        const productRatings = {};
-
-
-        for (const reviewId in reviews) {
-            const review = reviews[reviewId];
-            const { productId, stars } = review;
-
-            if (!productRatings[productId]) {
-                productRatings[productId] = {
-                    totalRating: 0,
-                    reviewCount: 0,
-                };
-            }
-
-            productRatings[productId].totalRating += stars;
-            productRatings[productId].reviewCount += 1;
-        }
-
-
-        const averageRatings = {};
-
-        for (const productId in productRatings) {
-            const { totalRating, reviewCount } = productRatings[productId];
-            averageRatings[productId] = totalRating / reviewCount;
-        }
-
-        return averageRatings;
-    }
-
-    const averageRatings = calculateAverageRatings(reviews);
-
 
 
     useEffect(() => {
@@ -205,7 +175,7 @@ export default function GetProducts() {
             </div>
             <div className="more-jerseys1">
                 <h3 className="song-h3">
-                    <ul>
+                    <ul className="ya-salen">
                         <li>Ya salen las estrellas</li>
                         <li>Mi viejo Chamartín</li>
                         <li>De lejos y de cerca</li>
@@ -216,6 +186,21 @@ export default function GetProducts() {
                         <li>Son todo lo que soy</li>
                     </ul>
                 </h3>
+                <div className="editors-pick-container">
+                    <div className="editor-h3-container">
+                        <h3 className="editors-picks">Editors' Picks</h3>
+                        <h3 className="great-gifts">Great Gifts</h3>
+                    </div>
+                    {randomProductsToDisplay.map((product) => (
+                        <div className="editor-product" onClick={() => goToProduct(product)} key={product?.id}>
+                            <img
+                                src={product.photoUrl}
+                                alt=""
+                                className="editor-images"
+                            ></img>
+                        </div>
+                    ))}
+                </div>
                 {productsToDisplay2.map((product) => (
                     <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
                         <img
