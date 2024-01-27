@@ -132,7 +132,6 @@ export default function GetProducts() {
                                 <div className="product-image-container">
                                     <img src={product.photoUrl} alt="" className="trending-images" onClick={() => goToProduct(product)} key={product?.id} />
                                     <div className="price-tag">${product.price}</div>
-
                                 </div>
                                 <div className="Product-Details-Buttons1">
                                     {user.id === product.ownerId && (
@@ -173,16 +172,36 @@ export default function GetProducts() {
                         columnClassName="my-masonry-grid_column"
                     >
                         {productsToDisplay1.map((product) => (
-                            <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                            <div className="single-product1" onClick={() => goToProduct(product)} key={product?.id}>
                                 <img
                                     src={product.photoUrl}
                                     alt=""
                                     className="userproducts-images"
                                 ></img>
+                                <div className="price-tag2">${product.price}</div>
+                                <div className="Product-Details-Buttons1">
+                                    {user.id === product.ownerId && (
+                                        <div className="product-bttns">
+                                            <OpenModalButton
+                                                buttonText="Update Product"
+                                                modalComponent={<UpdateProductModal productId={product.id} />}
+                                            />
+                                            <OpenModalButton
+                                                buttonText="Delete Product"
+                                                modalComponent={
+                                                    <DeleteProductModal
+                                                        productId={product.id}
+                                                    />
+                                                }
+                                            />
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </Masonry>
                 </div>
+
             </div>
             <div className="more-jerseys1">
                 <h3 className="song-h3">
