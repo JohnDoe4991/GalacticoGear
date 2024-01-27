@@ -554,8 +554,12 @@ border-radius: 5px;
  .song-h3 {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
+  font-size: 1.2em;
   margin: 0;
   padding: 0;
+  background-color: #e8e9e9;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .song-h3 ul {
