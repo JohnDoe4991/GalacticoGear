@@ -139,10 +139,14 @@ export default function GetProducts() {
                 </div>
             </div>
             <div className="more-jerseys">
-                <h3 className="more-jerseys-h3">Historia que tú hiciste
-                    Historia por hacer
-                    Porque nadie resiste
-                    Tus ganas de vencer</h3>
+                <h3 className="song-h3">
+                    <ul>
+                        <li>Historia que tú hiciste</li>
+                        <li>Historia por hacer</li>
+                        <li>Porque nadie resiste</li>
+                        <li>Tus ganas de vencer</li>
+                    </ul>
+                </h3>
                 {productsToDisplay1.map((product) => (
                     <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
                         <img
@@ -155,14 +159,17 @@ export default function GetProducts() {
                 ))}
             </div>
             <div className="more-jerseys">
-                <h3 className="more-jerseys-h3">Ya salen las estrellas
-                    Mi viejo Chamartín
-                    De lejos y de cerca
-                    Nos traes hasta aquí
-                    Llevo tu camiseta
-                    Pegada al corazón
-                    Los días que tú juegas
-                    Son todo lo que soy
+                <h3 className="song-h3">
+                    <ul>
+                        <li>Ya salen las estrellas</li>
+                        <li>Mi viejo Chamartín</li>
+                        <li>De lejos y de cerca</li>
+                        <li>Nos traes hasta aquí</li>
+                        <li>Llevo tu camiseta</li>
+                        <li>Pegada al corazón</li>
+                        <li>Los días que tú juegas</li>
+                        <li>Son todo lo que soy</li>
+                    </ul>
                 </h3>
                 {productsToDisplay2.map((product) => (
                     <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
@@ -173,15 +180,18 @@ export default function GetProducts() {
                         ></img>
                     </div>
                 ))}
-                <h3 className="more-jerseys-h3">Ya corre la saeta
-                    Ya ataca mi Madrid
-                    Soy lucha, soy belleza
-                    El grito que aprendí
-                    Madrid, Madrid, Madrid
-                    ¡Hala Madrid!
-                    Y nada más
-                    Y nada más
-                    ¡Hala Madrid!
+                <h3 className="song-h3">
+                    <ul>
+                        <li>Ya corre la saeta</li>
+                        <li>Ya ataca mi Madrid</li>
+                        <li>Soy lucha, soy belleza</li>
+                        <li>El grito que aprendí</li>
+                        <li>Madrid, Madrid, Madrid</li>
+                        <li>¡Hala Madrid!</li>
+                        <li>Y nada más</li>
+                        <li>Y nada más</li>
+                        <li>¡Hala Madrid!</li>
+                    </ul>
                 </h3>
             </div>
             <div className="what-is-container">

@@ -433,7 +433,7 @@
 }
 
 .items-you-like {
-  position: relative; /* Needed to position the pseudo-element */
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -444,7 +444,7 @@
   margin-top: 7px;
   margin-bottom: 20px;
   padding-bottom: 13px;
-  overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+  overflow: hidden;
 }
 
 .items-you-like::after {
@@ -453,11 +453,74 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 61%; /* Half the height of the parent */
+  height: 61%;
   background-color: #FEFBD7;
-  z-index: -1; /* Ensures the content goes on top of the background */
+  z-index: -1;
 }
 
+.items-you-like-h3{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: .08px;
+    margin-left: 14px;
+}
+
+.annoying-photos{
+  gap:10px;
+  position:absolute;
+  top:0;
+  left:0;
+  object-fit: cover ;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.four-guys{
+  display:inline-block;
+  width:49.6%;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  height: 100%;
+
+}
+
+.photos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.preview img {
+  display:inline-block;
+  height: 347px;
+border-radius: 5px;
+  position: relative;
+  width: 50%;
+  width: 392px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.preview img:hover {
+  transform: scale(1.05);
+}
+
+.all-photoz{
+  display: flex;
+  align-items: center;
+}
+
+.bott-photoz {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
 
  .userproducts-images{
   width: 244px;
@@ -487,6 +550,39 @@
     font-weight: 100;
     margin-bottom: 3px;
  }
+
+ .song-h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.song-h3 ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.song-h3 li {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding-bottom: 0.1em;
+  margin-left: 0;
+  position: relative;
+  padding-left: 1em;
+}
+
+.song-h3 li::first-letter {
+  font-size: 1.4em;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  line-height: 1;
+  margin-top: .2em;
+}
+
+
 
  /* Masonry CSS */
 .my-masonry-grid {
@@ -1533,63 +1629,4 @@ font-size: 31px;
 
 .user-name {
   font-weight: bold;
-}
-
-.items-you-like-h3{
-  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: .08px;
-    margin-left: 14px;
-}
-
-.annoying-photos{
-  gap:10px;
-  position:absolute;
-  top:0;
-  left:0;
-  object-fit: cover ;
-  padding: 2px;
-  border-radius: 3px;
-}
-
-.four-guys{
-  display:inline-block;
-  width:49.6%;
-  border-radius: 10px;
-  flex-wrap: wrap;
-  height: 100%;
-
-}
-
-.photos {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.preview img {
-  display:inline-block;
-  height: 347px;
-border-radius: 5px;
-  position: relative;
-  width: 50%;
-  width: 392px;
-    margin-left: 10px;
-    cursor: pointer;
-    margin-right: 15px;
-}
-
-.all-photoz{
-  display: flex;
-  align-items: center;
-}
-
-.bott-photoz {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  justify-content: center;
-  align-items: stretch;
 }
