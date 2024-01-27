@@ -432,18 +432,32 @@
   font-weight: 100;
 }
 
-.items-you-like{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 847px;
-    max-width: 1002px;
-    margin: 0 auto;
-    margin-top: 7px;
-    margin-bottom: 20px;
-    background-color: #FEFBD7;
- }
+.items-you-like {
+  position: relative; /* Needed to position the pseudo-element */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 847px;
+  max-width: 1002px;
+  margin: 0 auto;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  padding-bottom: 13px;
+  overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+}
+
+.items-you-like::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 61%; /* Half the height of the parent */
+  background-color: #FEFBD7;
+  z-index: -1; /* Ensures the content goes on top of the background */
+}
+
 
  .userproducts-images{
   width: 244px;
@@ -494,12 +508,11 @@
 }
 
 .trending-images {
-  height: 140px;
-  width: 188px;
+  height: 162px;
+  width: 190px;
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
-  margin: 10px;
-  padding:10px;
+  margin: 4px;
   max-width: 260px;
   max-height: 200px;
   cursor: pointer;
@@ -507,15 +520,15 @@
 
 .price-tag {
     position: absolute;
-    bottom: 20px; /* Distance from the bottom of the image */
-    left: 20px; /* Distance from the left side of the image */
+    bottom: 10px;
+    left: 13px;
     background-color: white;
     color: black;
     padding: 5px 15px;
-    font-size: 1em; /* Adjust font size as needed */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow effect */
-    border-radius: 20px; /* Gives the pill shape */
-    font-weight: bold; /* Makes the price text bold */
+    font-size: 11px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-weight: bold;
     text-align: center;
     cursor: pointer;
 }
@@ -1528,6 +1541,7 @@ font-size: 31px;
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: .08px;
+    margin-left: 14px;
 }
 
 .annoying-photos{
@@ -1564,21 +1578,18 @@ border-radius: 5px;
   width: 392px;
     margin-left: 10px;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 .all-photoz{
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .bott-photoz {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.single-product {
-  width: calc(33.333% - 10px); /* Adjust the 10px for margin */
-  margin: 20px; /* Half of 10px to have space between items */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: stretch;
 }
