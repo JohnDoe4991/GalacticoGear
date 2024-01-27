@@ -104,16 +104,35 @@ export default function GetProducts() {
                         {newImg && (
                             <div className="product-image-container">
                                 <img className="preview-img" src={newImg.photoUrl} alt={newImg.title} />
-                                <div className="price-tag">${newImg.price}</div>
+                                <div className="price-tag1">${newImg.price}</div>
+                                {user.id === newImg.ownerId && (
+                                    <div className="product-bttns">
+                                        <OpenModalButton
+                                            buttonText="Update Product"
+                                            modalComponent={<UpdateProductModal productId={newImg.id} />}
+                                        />
+                                        <OpenModalButton
+                                            buttonText="Delete Product"
+                                            modalComponent={
+                                                <DeleteProductModal
+                                                    productId={newImg.id}
+                                                />
+                                            }
+                                        />
+                                    </div>
+                                )}
                             </div>
+
                         )}
+
                     </div>
                     <div className="bott-photoz">
                         {productsToDisplay.map((product) => (
                             <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
                                 <div className="product-image-container">
-                                    <img src={product.photoUrl} alt="" className="trending-images" />
+                                    <img src={product.photoUrl} alt="" className="trending-images" onClick={() => goToProduct(product)} key={product?.id} />
                                     <div className="price-tag">${product.price}</div>
+
                                 </div>
                                 <div className="Product-Details-Buttons1">
                                     {user.id === product.ownerId && (
@@ -147,18 +166,25 @@ export default function GetProducts() {
                         <li>Tus ganas de vencer</li>
                     </ul>
                 </h3>
-                {productsToDisplay1.map((product) => (
-                    <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
-                        <img
-                            src={product.photoUrl}
-                            alt=""
-                            className="userproducts-images"
-                        ></img>
-                    </div>
-
-                ))}
+                <div className="middle-prod-container">
+                    <Masonry
+                        breakpointCols={3}
+                        className="my-masonry-grid"
+                        columnClassName="my-masonry-grid_column"
+                    >
+                        {productsToDisplay1.map((product) => (
+                            <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
+                                <img
+                                    src={product.photoUrl}
+                                    alt=""
+                                    className="userproducts-images"
+                                ></img>
+                            </div>
+                        ))}
+                    </Masonry>
+                </div>
             </div>
-            <div className="more-jerseys">
+            <div className="more-jerseys1">
                 <h3 className="song-h3">
                     <ul>
                         <li>Ya salen las estrellas</li>
