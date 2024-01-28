@@ -423,6 +423,7 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 19pt;
   font-weight: 100;
+  margin-top: 16px;
 }
 
 .page-breakh3{
@@ -629,7 +630,7 @@ border-radius: 5px;
 }
 
 .trending-images {
-  height: 162px;
+  height: 159px;
   width: 190px;
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
@@ -1784,4 +1785,12 @@ font-size: 31px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.valintine{
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+    font-weight: 50;
+    font-size: 31.01px;
+    line-height: 1.1;
+    letter-spacing: .46515px;
 }

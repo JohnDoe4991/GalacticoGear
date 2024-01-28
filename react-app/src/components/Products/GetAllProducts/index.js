@@ -192,24 +192,30 @@ export default function GetProducts() {
                         <h3 className="great-gifts">Great Gifts</h3>
                     </div>
                     {randomProductsToDisplay.map((product) => (
-                        <div className="editor-product" onClick={() => goToProduct(product)} key={product?.id}>
+                        <div className="editor-product" >
                             <img
                                 src={product.photoUrl}
                                 alt=""
                                 className="editor-images"
+                                onClick={() => goToProduct(product)} key={product?.id}
                             ></img>
                         </div>
                     ))}
                 </div>
-                {productsToDisplay2.map((product) => (
-                    <div className="single-product" onClick={() => goToProduct(product)} key={product?.id}>
-                        <img
-                            src={product.photoUrl}
-                            alt=""
-                            className="userproducts-images"
-                        ></img>
-                    </div>
-                ))}
+                <div className="jersey-bottom-container">
+                    <h1 className="valintine">The sweetest gifts for Every Valentine</h1>
+                    {productsToDisplay2.map((product) => (
+                        <div className="single-product-3" >
+                            <img
+                                src={product.photoUrl}
+                                alt=""
+                                className="userproducts-images"
+                                onClick={() => goToProduct(product)} key={product?.id}
+                            ></img>
+
+                        </div>
+                    ))}
+                </div>
                 <h3 className="song-h3">
                     <ul>
                         <li>Ya corre la saeta</li>
