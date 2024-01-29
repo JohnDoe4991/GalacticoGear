@@ -6,6 +6,9 @@ import './Navigation.css';
 import SearchBar from '../SearchBar/SearchBar';
 import ResultsList from '../SearchBar/ResultsList';
 import galacticoGear from "../../images/galacticoGear.png"
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdFavoriteBorder } from "react-icons/md";
+import Tooltip from "./tooltip"
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
@@ -51,6 +54,12 @@ function Navigation({ isLoaded }) {
 				{isLoaded && (
 					<div className="profile-button-container">
 						<ProfileButton user={sessionUser} showMenu={showMenu} />
+						{sessionUser && (<Tooltip text="Cart" className='cart-icon'>
+							<a href='/carts' className='cart-icon'><AiOutlineShoppingCart /></a>
+						</Tooltip>)}
+						{sessionUser && (<Tooltip text="Favorites" className='fav-icon'>
+							<a href='/favorites' className='fav-icon'><MdFavoriteBorder /></a>
+						</Tooltip>)}
 					</div>
 				)}
 			</div>

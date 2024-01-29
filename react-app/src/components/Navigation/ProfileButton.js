@@ -55,7 +55,7 @@ function ProfileButton({ user }) {
             <div>
               <OpenModalButton
                 className="prof-button1"
-                buttonText="Create a new product"
+                buttonText="Post Product"
                 modalComponent={
                   <CreateProductModal
                   />
