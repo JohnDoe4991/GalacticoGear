@@ -1743,6 +1743,7 @@ font-size: 31px;
   border-radius: 33px;
   box-shadow: 0px 0px 1px 1px rgba(142, 142, 142, 0.5);
   width: 1002px;
+  margin-bottom: 65px;
 }
 
 .editor-images{
@@ -1826,7 +1827,10 @@ font-size: 31px;
   justify-content: flex-start;
   gap: 10px;
   margin-bottom: 45px;
+
 }
+
+
 
 .jersey-bottom-images button{
   margin: 5px;
@@ -1845,8 +1849,14 @@ font-size: 31px;
 
 .userproducts-images-bottom {
   width: 250px;
-  height: 165px;
+  height: 230px;
   border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.userproducts-images-bottom:hover {
+  transform: scale(1.05);
 }
 
 .price-tag-bot{
@@ -1855,4 +1865,6 @@ font-size: 31px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: .08px;
+  margin-top: 8px;
+
 }
