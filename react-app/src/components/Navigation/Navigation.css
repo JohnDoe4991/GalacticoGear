@@ -145,13 +145,15 @@ cursor:pointer;
 .profile-button-container{
   display: flex;
   padding: 10px;
+  align-items: center;
 }
 
 .cart-icon{
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
   background-color: transparent;
   font-size: 23px;
-  display: flex;
+  position: relative;
+    display: inline-block;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
@@ -169,7 +171,8 @@ cursor:pointer;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
   background-color: transparent;
   font-size: 23px;
-  display: flex;
+  position: relative;
+    display: inline-block;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
@@ -181,12 +184,6 @@ width:35px;
   box-sizing: border-box;
 }
 
-
-  .cart-icon:hover, .fav-icon:hover {
-    background-color: #CCEBFF;
-    border-radius: 200px;
-    color: #122768;
-  }
 
 
   .tooltip {
