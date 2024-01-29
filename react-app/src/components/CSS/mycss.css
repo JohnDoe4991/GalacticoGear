@@ -1794,3 +1794,65 @@ font-size: 31px;
     line-height: 1.1;
     letter-spacing: .46515px;
 }
+
+.valintine1 {
+  font-family: "Guardian-EgypTT", "Charter", "Charter Bitstream", "Cambria", "Noto Serif Light", "Droid Serif", "Georgia", "serif";
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.46515px;
+}
+
+
+
+.valintine-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 29px;
+  margin-right: 30px;
+}
+
+.jersey-bottom-container{
+  display: flex;
+  margin-top: 20px;
+  max-width: 1002px;
+}
+
+.jersey-bottom-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.jersey-bottom-images button{
+  margin: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 10px;
+  border: none;
+    font-size: 8pt;
+    width: 95px;
+    cursor:pointer;
+}
+
+.single-product-3 {
+  flex: 1 1 calc(33.333% - 10px);
+  max-width: calc(33.333% - 10px);
+}
+
+.userproducts-images-bottom {
+  width: 250px;
+  height: 165px;
+  border-radius: 5px;
+}
+
+.price-tag-bot{
+  font-family: "Graphik Webfont","-apple-system","Helvetica Neue","Droid Sans","Arial","sans-serif";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: .08px;
+}

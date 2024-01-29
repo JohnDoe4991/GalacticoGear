@@ -203,18 +203,41 @@ export default function GetProducts() {
                     ))}
                 </div>
                 <div className="jersey-bottom-container">
-                    <h1 className="valintine">The sweetest gifts for Every Valentine</h1>
-                    {productsToDisplay2.map((product) => (
-                        <div className="single-product-3" >
-                            <img
-                                src={product.photoUrl}
-                                alt=""
-                                className="userproducts-images"
-                                onClick={() => goToProduct(product)} key={product?.id}
-                            ></img>
-
-                        </div>
-                    ))}
+                    <div className="valintine-container">
+                        <h1 className="valintine">Best Sellers</h1>
+                        <h2 className="valintine1">Shop the Look</h2>
+                    </div>
+                    <div className="jersey-bottom-images">
+                        {productsToDisplay2.map((product) => (
+                            <div className="bottom-images-con">
+                                <img
+                                    src={product.photoUrl}
+                                    alt=""
+                                    className="userproducts-images-bottom"
+                                    onClick={() => goToProduct(product)} key={product?.id}
+                                ></img>
+                                <div className="price-tag-bot">${product.price}</div>
+                                <div className="Product-Details-Buttons1">
+                                    {user.id === product.ownerId && (
+                                        <div className="product-bttns">
+                                            <OpenModalButton
+                                                buttonText="Update Product"
+                                                modalComponent={<UpdateProductModal productId={product.id} />}
+                                            />
+                                            <OpenModalButton
+                                                buttonText="Delete Product"
+                                                modalComponent={
+                                                    <DeleteProductModal
+                                                        productId={product.id}
+                                                    />
+                                                }
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <h3 className="song-h3">
                     <ul>
