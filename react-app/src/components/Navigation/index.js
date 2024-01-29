@@ -5,10 +5,9 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import SearchBar from '../SearchBar/SearchBar';
 import ResultsList from '../SearchBar/ResultsList';
-import galacticoGear from "../../images/galacticoGear.png"
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { MdFavoriteBorder } from "react-icons/md";
-import Tooltip from "./tooltip"
+import galacticoGear from "../../images/galacticoGear.png";
+import { CiShoppingCart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
@@ -22,7 +21,6 @@ function Navigation({ isLoaded }) {
 		setIsResultsOpen(false);
 	};
 
-
 	const handleOutsideClick = (event) => {
 		if (resultsContainerRef.current && !resultsContainerRef.current.contains(event.target)) {
 			clearSearch();
@@ -30,9 +28,7 @@ function Navigation({ isLoaded }) {
 	};
 
 	useEffect(() => {
-
 		document.addEventListener('click', handleOutsideClick);
-
 
 		return () => {
 			document.removeEventListener('click', handleOutsideClick);
@@ -42,9 +38,9 @@ function Navigation({ isLoaded }) {
 	return (
 		<div className="nav-container">
 			<div className='navBar-inner-container'>
-				<div >
-					<NavLink exact to="/"><img className='logo-img' src={galacticoGear} alt="logo" id="logo" /></NavLink>
-				</div>
+				<NavLink exact to="/">
+					<img className='logo-img' src={galacticoGear} alt="logo" id="logo" />
+				</NavLink>
 				{sessionUser && (
 					<SearchBar setResults={setResults} setIsResultsOpen={setIsResultsOpen} />
 				)}
@@ -54,12 +50,12 @@ function Navigation({ isLoaded }) {
 				{isLoaded && (
 					<div className="profile-button-container">
 						<ProfileButton user={sessionUser} showMenu={showMenu} />
-						{sessionUser && (<Tooltip text="Cart" className='cart-icon'>
-							<a href='/carts' className='cart-icon'><AiOutlineShoppingCart /></a>
-						</Tooltip>)}
-						{sessionUser && (<Tooltip text="Favorites" className='fav-icon'>
-							<a href='/favorites' className='fav-icon'><MdFavoriteBorder /></a>
-						</Tooltip>)}
+						{sessionUser && (<NavLink to='/carts' className='cart-icon' title="Cart">
+							<CiShoppingCart />
+						</NavLink>)}
+						{sessionUser && (<NavLink to='/favorites' className='fav-icon' title="Favorites">
+							<FaHeart />
+						</NavLink>)}
 					</div>
 				)}
 			</div>
